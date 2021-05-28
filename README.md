@@ -93,7 +93,13 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
 
 # Strings
 
-9. Refresh: What are strings? A string is a sequence of characters. Although we can have list of characters, often times we want to access and manipulate the sequence as an aggregate set of text rather than individual letters. Strings are identified by the <code>“ ”</code> or alternatively by <code>‘ ’</code>.
+9. What are strings? 
+
+10. A string is a sequence of characters. 
+
+11. Although we can have list of characters, often times we want to access and manipulate the sequence as an aggregate set of text rather than individual letters. 
+
+12. Strings are identified by the <code>“ ”</code> or alternatively by <code>‘ ’</code>.
 
 ```Python
 # example that creates a new string variable
@@ -117,33 +123,33 @@ str(15.0)
 str(True)
 ```
 
-10. Because certain operations on strings are so common, Python includes a variety of built-in methods that you can apply to a string object:
+13. Because certain operations on strings are so common, Python includes a variety of built-in methods that you can apply to a string object:
 
 ## Title Methods
 
-11. Let's look at an example that uses different title methods.
+14. Let's look at an example that uses different title methods.
 
 ```Python
 # example using my name
 name = "katherine walden"
 ```
 
-11. Next, we’ll use the `print` function with the method `title`. Python functions and methods always end with a `()`. Methods define an additional action that can be applied to the data.
+15. Next, we’ll use the `print` function with the method `title`. Python functions and methods always end with a `()`. Methods define an additional action that can be applied to the data.
 ```Python
 # example using my name, printed in title case
 name = "katherine walden"
 print(name.title())
 ```
 
-12. Your program should output your data with a leading capital letter.
+16. Your program should output your data with a leading capital letter.
 
-13. We can also change the case using the `upper()` method and `lower()` method: `print(name.upper())` outputs your string with all capital letters, while `print(name.lower())` outputs your string in all lower case.
+17. We can also change the case using the `upper()` method and `lower()` method: `print(name.upper())` outputs your string with all capital letters, while `print(name.lower())` outputs your string in all lower case.
 
 `Katherine Walden`
 `KATHERINE WALDEN`
 `katherine walden`
 
-14. Try adding two additional `print()` functions calling the `name` variable with each of these methods.  
+18. Try adding two additional `print()` functions calling the `name` variable with each of these methods.  
 
 <blockquote>Q2: Describe the syntax of the three commands that we just used (steps 10-14) in your own words. What is this code doing? Define the function and method for each example.</blockquote>
 
@@ -152,11 +158,12 @@ first_name = "katherine"
 last_name = "walden"
 full_name = first_name + " " + last name
 ```
+
 ## Concatenation
 
-15. Let’s modify our code a bit and create two new variables `first_name` for your first name and `last_name` for your last name. We can then combine these two string variables (called concatenation) in a third variable called `full_name`.
+19. Let’s modify our code a bit and create two new variables `first_name` for your first name and `last_name` for your last name. We can then combine these two string variables (called concatenation) in a third variable called `full_name`.
 
-16. If we want our first and last name to be separated by a space, we need to tell Python to add one in by including the `“ “`, otherwise, each string will be printed back-to-back.
+20. If we want our first and last name to be separated by a space, we need to tell Python to add one in by including the `“ “`, otherwise, each string will be printed back-to-back.
 ```Python
 first_name = "katherine"
 last_name = "walden"
@@ -165,7 +172,7 @@ full_name = first_name + " " + last name
 print(full_name)
 ```
 
-17. We can then use the `print()` function as we did before to output `full_name` in title case.
+21. We can then use the `print()` function as we did before to output `full_name` in title case.
 ```Python
 first_name = "katherine"
 last_name = "walden"
@@ -174,7 +181,7 @@ full_name = first_name + " " + last name
 print("Hello, " + full_name.title() + "!")
 ```
 
-18. We could combine strings and variables in the same `print()` function to output a full sentence to the screen.
+22. We could combine strings and variables in the same `print()` function to output a full sentence to the screen.
 ```Python
 first_name = "katherine"
 last_name = "walden"
@@ -185,15 +192,15 @@ sentence="Hello, " + full_name.title() + "!"
 print(sentence)
 ```
 
-19. We could also assign this whole sentence to a variable and return the same output.
+23. We could also assign this whole sentence to a variable and return the same output.
 
 <blockquote>Q3: Explain how each of these two programs (steps 15-18) work in your own words.</blockquote>
 
 ### Combining Variable Types
 
-20. Python works with integers (whole numbers) and floats (any number with a decimal point). Python uses the basic mathematic symbols to perform functions: `+` (add), `-` (subtract), `*` (multiply), `/` (divide). 
+24. Python works with integers (whole numbers) and floats (any number with a decimal point). Python uses the basic mathematic symbols to perform functions: `+` (add), `-` (subtract), `*` (multiply), `/` (divide). 
 
-21. Try this program:
+25. Try this program:
 ```Python
 print(2+3)
 print(2-3)
@@ -202,22 +209,23 @@ print(2/3)
 ```
 <blockquote>Q4: Why does <code>print(2//3)</code> return 0? How would you modify your code to return the decimal number? Why?</blockquote>
 
-22. Hint: Try `print(2.0//3.0)` using the floating point integers (numbers with decimal points).
+26. Hint: Try `print(2.0//3.0)` using the floating point integers (numbers with decimal points).
 
-23. Let’s write a new program with an integer variable and a string variable. Feel free to modify course number and department if taking this as something other than CSE 10101.
+27. Let’s write a new program with an integer variable and a string variable. Feel free to modify course number and department if taking this as something other than CSE 10101.
 ```Python
 course_name="Elements of Computing I"
 course_number = 10101
 
 print("Welcome to " + course_name.title() + " CSE:" + course_number)
 ```
-24. When you run the program, you will receive an error.
+
+28. When you run the program, you will receive an error.
 
 <p align="center"><a href="https://github.com/kwaldenphd/Python/blob/master/images/Image_8.png?raw=true"><img class="aligncenter" src="https://github.com/kwaldenphd/Python/blob/master/images/Image_8.png?raw=true" /></a></p>
 
-25. The `type` error is telling us that we cannot use these two different variable types in the same function. 
+29. The `type` error is telling us that we cannot use these two different variable types in the same function. 
 
-26. When we want numbers to be read as characters rather than numeric digits, we have to use the string method `str()` to convert the integer into a string of characters.
+30. When we want numbers to be read as characters rather than numeric digits, we have to use the string method `str()` to convert the integer into a string of characters.
 ```Python
 print("Welcome to " + course_name.title() + " CSE:" + str(course_number))
 ```
@@ -227,17 +235,17 @@ print("Welcome to " + course_name.title() + " CSE:" + str(course_number))
 
 ## String Length and Access
 
-We can get the length or size of a string by using the `len` function.
+31. We can get the length or size of a string by using the `len` function.
 
 ```Python
 len(first_name)
 ```
 
-27. We can also extract (or modify) individual characters within a string. To do so, we need a way to specify which character we mean. 
+32. We can also extract (or modify) individual characters within a string. To do so, we need a way to specify which character we mean. 
 
-28. This is done by giving each position in the string an `index number` or `index operator`, which is determined by simply counting off (starting at 0) from left to right. 
+33. This is done by giving each position in the string an `index number` or `index operator`, which is determined by simply counting off (starting at 0) from left to right. 
 
-29. We then use the index number as a subscript into the string. 
+34. We then use the index number as a subscript into the string. 
 
 ```Python
 # access first character in string
@@ -247,15 +255,15 @@ first_name[0]
 first_name[-1]
 ```
 
-30. In Python there is no notion of a character type as there is in languages such as Java or C. So when we check the type for a character in a string, we get back another string.
+35. In Python there is no notion of a character type as there is in languages such as Java or C. So when we check the type for a character in a string, we get back another string.
 
 ```Python
 type(first_name[0])
 ```
 
-30. Another example: let's say we have a variable `color` that includes the string `"turquoise"`.
+36. Another example: let's say we have a variable `color` that includes the string `"turquoise"`.
 
-32. Then...
+37. Then...
 - `color[0]` holds the letter `t`
 - `color[1]` holds the letter `u`
 - `color[2]` holds the letter `r`
@@ -263,31 +271,34 @@ type(first_name[0])
 
 <blockquote>Q7: Write a program that prompts the user to enter a 6-letter word, and then prints the first, third, and fifth letters of that word.</blockquote>
  
-31. A sample output for your program might look like this:
+38. A sample output for your program might look like this:
 ```
 Please enter a 6-letter word: joyful
 The first, third, and fifth letters are: j y u
 ```
-NOTE: Strings in Python are immutable, which means that you cannot change the elements of a string once it is set.
 
-The following program will result in a `TypeError`.
+39. NOTE: Strings in Python are immutable, which means that you cannot change the elements of a string once it is set.
+
+40. The following program will result in a `TypeError`.
 
 ```Python
 first_name[0] = 'k'
 ```
-So what do you do when you want to update a string? You simply construct a new one!
+
+41. So what do you do when you want to update a string? You simply construct a new one!
 
 ```Python
 first_name = 'k' + first_name[1:]
 first_name
 ```
+
 ## Other String Operations
 
-Since a string is a sequence of characters, there are a few other operations that work on strings.
+42. Since a string is a sequence of characters, there are a few other operations that work on strings.
 
 ### Length
 
-We've already seen the `len` function in action, but to refresh:
+43. We've already seen the `len` function in action, but to refresh:
 
 ```Python
 len(first_name)
@@ -295,7 +306,7 @@ len(first_name)
 
 ### Properties
 
-We can check the properties of characters in a string.
+44. We can check the properties of characters in a string.
 - `.isalpha()` checks if all string values are letters
 - `.isalnum()` checks if string includes only letters and numbers
 - `.isdigit()` checks if all string values are numbers
@@ -304,7 +315,7 @@ We can check the properties of characters in a string.
 - `.istitle()` checks if the string includes any title-case characters
 - `.isupper()` checks if the string includes any upper-case characters
 
-To see these string property methods in action in Python syntax:
+45. To see these string property methods in action in Python syntax:
 
 ```Python
 # checks if all string values are letters
@@ -329,11 +340,11 @@ To see these string property methods in action in Python syntax:
 'abc123'.isupper()
 ```
 
-These commands return Boolean `True` or `False` values.
+46. These commands return Boolean `True` or `False` values.
 
 ### Sort
 
-We can sort characters in a string alphabetically or reverse alphabetically.
+47. We can sort characters in a string alphabetically or reverse alphabetically.
 
 ```Python
 # sort alphabetically
@@ -343,11 +354,13 @@ sorted(first_name)
 reversed(first_name)
 ```
 
-These commands output the characters in the string in alphabetical or reverse alphabetical order.
+48. These commands output the characters in the string in alphabetical or reverse alphabetical order.
 
 ### Max and Min
 
-We can also get the maximum or minimum value in the string. For strings that are sequences of characters, the minimum value is the character that appears first in the English-language alphabet, and the maximum is the character that appears last in the English-language alphabet.
+49. We can also get the maximum or minimum value in the string. 
+
+50. For strings that are sequences of characters, the minimum value is the character that appears first in the English-language alphabet, and the maximum is the character that appears last in the English-language alphabet.
 
 ```Python
 # get max string letter
@@ -359,7 +372,7 @@ min(first_name)
 
 ### `in` Operator
 
-We can also use the `in` operator to check if a character or substring (combination of characters) is present in another string.
+51. We can also use the `in` operator to check if a character or substring (combination of characters) is present in another string.
 
 ```Python
 # checks is 'a' is in 'abcd' string
@@ -372,25 +385,24 @@ We can also use the `in` operator to check if a character or substring (combinat
 'bc' in 'abcd'
 ```
 
-Each of these `in` operator examples returns a Boolean value, `True` or `False`.
-
+52. Each of these `in` operator examples returns a Boolean value, `True` or `False`.
 
 ### Search
 
-32. We can also instruct the computer to search for a given character within a string.
+53. We can also instruct the computer to search for a given character within a string.
 
-34. There are a few different search methods we can use with strings:
+54. There are a few different search methods we can use with strings:
  - `.startswith()` checks if the string starts with a character or substring
  - `.endswith()` checks if the string ends with a character or substring
  - `.find()` locates the index position for a specific character or substring
  - `.index()` also locates the index position for a specific character or substring
  
- NOTE: The `.find()` method returns `-1` if the character or substring is not found. The `.index()` method will throw an error if the character or substring is not found.
+55. NOTE: The `.find()` method returns `-1` if the character or substring is not found. The `.index()` method will throw an error if the character or substring is not found.
  
- To see these methods in action using Python syntax:
+56. To see these methods in action using Python syntax:
  
- ```Python
- # checks if string starts with 'the' substring
+```Python
+# checks if string starts with 'the' substring
 'the boy who blocked his own shot'.startswith('the')
 
 # checks if string ends with 'shot' substring
@@ -412,11 +424,11 @@ the boy who blocked his own shot'.endswith('shot')
 'the boy who blocked his own shot'.index('who', 10)
 ```
 
-33. Let's look at another example.
+57. Let's look at another example.
 
-Say we have a variable `color` holds the string `"turquoise"`. 
+58. Say we have a variable `color` holds the string `"turquoise"`. 
 
-We can retrieve the index of the letter `q` (which is 3) as follows:
+59. We can retrieve the index of the letter `q` (which is 3) as follows:
 ```python
 color = "turquoise"
 index_number = color.index("q")
@@ -427,13 +439,13 @@ print ("The index number for the letter u within the word " + color + " is", ind
 
 # Lists
 
-34. Python allows us to store information in a few different ways. 
+60. Python allows us to store information in a few different ways. 
 
-36. In this lab, we're focusing on lists, which are an ordered collection of items.
+61. In this lab, we're focusing on lists, which are an ordered collection of items.
 
-The individual values in a list are called elements or items. 
+62. The individual values in a list are called elements or items. 
 
-Lists have a type and are also considered values themselves.
+63. Lists have a type and are also considered values themselves.
 
 ## Lists With Numbers
 
@@ -448,7 +460,7 @@ numbers = [0, 1, 2, 3]
 type(numbers)
 ```
 
-Although this is rare, list elements do not need to be the same type.
+64. Although this is rare, list elements do not need to be the same type.
 
 ```Python
 [0, 1.0, 'a']
@@ -456,13 +468,13 @@ Although this is rare, list elements do not need to be the same type.
 
 ### List Length and Access
 
-We can use the `len` function to get the length of a list.
+65. We can use the `len` function to get the length of a list.
 
 ```Python
 len(numbers)
 ```
 
-We can also use the index operator and index position to access and manipulate elements in a list.
+66. We can also use the index operator and index position to access and manipulate elements in a list.
 
 ```Python
 # access first item in a list
@@ -478,11 +490,11 @@ numbers[0] = 'zero'
 numbers
 ```
 
-A few other notes on index operators:
+67. A few other notes on index operators:
 
-Indeces can be any integer expression.
+68. Indeces can be any integer expression.
 
-A few examples:
+69. A few examples:
 
 ```Python
 # `numbers[0+1]` is the same as `numbers[1]`
@@ -499,13 +511,13 @@ numbers[index * 2]
 numbers[2]
 ```
 
-An invalid index will yield an IndexError.
+70. An invalid index will yield an IndexError.
 
 ```Python
 numbers[1000]
 ```
 
-And as covered with strings, a negative index will start at the end of the list and count right to left.
+71. And as covered with strings, a negative index will start at the end of the list and count right to left.
 
 ```Python
 # access last item in list
@@ -517,9 +529,9 @@ numbers[-2]
 
 ### Modifying Lists
 
-While strings are immutable, items in a list can be modified.
+72. While strings are immutable, items in a list can be modified.
 
-An example we've seen before that modifies a single list item.
+73. An example we've seen before that modifies a single list item.
 
 ```Python
 # modify first item in a list
@@ -529,7 +541,7 @@ numbers
 
 #### Growing Lists
 
-We can also grow an existing list using the `.append()` or `.extend()` methods.
+74. We can also grow an existing list using the `.append()` or `.extend()` methods.
 
 ```Python
 # add integer 4 to end of numbers list
@@ -541,22 +553,21 @@ numbers.extend(range(5, 8))
 numbers
 ```
 
-To unpack what happened in that last bit of code- the `range()` function returns a sequence of numbers.
+75. To unpack what happened in that last bit of code- the `range()` function returns a sequence of numbers.
 
-The default `range()` function starts at `0`, but in this example we start at `5`. 
+76. The default `range()` function starts at `0`, but in this example we start at `5`. 
 
-The default `range()` function moves by increments of `1` and stops before a specified number. In our example, `range()` stops before 8.
+77. The default `range()` function moves by increments of `1` and stops before a specified number. In our example, `range()` stops before 8.
 
 #### A Quick Detour Into `range()`
 
-The core syntax for range:
-`range(start, stop, step)`
+77. The core syntax for range: `range(start, stop, step)`
 
-You may have expected to see the numbers one to ten printed. This is yet another example of the quirks of working with programming languages.
+78. You may have expected to see the numbers one to ten printed. This is yet another example of the quirks of working with programming languages.
 
-Python starts with the first number and quits when it reaches the last number of your range. Because it stops at 10, it doesn’t include the 10.
+79. Python starts with the first number and quits when it reaches the last number of your range. Because it stops at 10, it doesn’t include the 10.
 
-We can actually create lists using `range()`.
+80. We can actually create lists using `range()`.
 
 ```Python
 # in this example we'll wrap the list() function around the range() function to create a list of numbers
@@ -567,11 +578,11 @@ print(numbers)
 
 <blockquote>Q9: How would you modify this code to output the full range 1-10?</blockquote>
 
-What if we just wanted the odd numbers in this range? 
+81. What if we just wanted the odd numbers in this range? 
 
-We could add an additional value to the range function to tell the computer to count by two.
+82. We could add an additional value to the range function to tell the computer to count by two.
 
-A example that changes the step interval.
+83. A example that changes the step interval.
 
 ```Python
 numbers = list(range(1,11,2))
@@ -580,24 +591,9 @@ print(numbers)
 
 <blockquote>Q10: How would you rewrite the code to include only the even numbers from 1 to 10?</blockquote>
 
-Can you write a program that creates a list that represents all of the different patterns we could represent from 1 bit to 8 bits, like our chart from binary math lab?
-- 1 bit - 2 patterns
-- 2 bits - 4
-- 3 bits - 8
-- 4 bits - 16
-- 5 bits - 32
-- 6 bits - 64
-- 7 bits - 128
-- 8 bits - 256
-- n bits -2n patterns
-
-Try to write a program that outputs the list: `[2, 4, 8, 16, 32, 64, 128, 256]`.
-
-<blockquote>Hint: a double astrisk (**) represents exponents in Python. So 2<sup>2</sup> would be 2**2.</blockquote>
-
 #### Deleting Items from Lists
 
-We can delete items from a list using the `pop()` method or the `del` statement.
+85. We can delete items from a list using the `pop()` method or the `del` statement.
 
 ```Python
 # remove an item at index 0 and return just that item
@@ -609,11 +605,11 @@ del numbers[0]
 
 ### Empty Lists
 
-A list with no items is called an empty list.
+86. A list with no items is called an empty list.
 
-We can also use the `list()` argument to create an empty list.
+87. We can also use the `list()` argument to create an empty list.
 
-Examples in Python syntax:
+88. Examples in Python syntax:
 
 ```Python
 # create empty list
@@ -625,7 +621,7 @@ list()
 
 ### Nesting and Sublists
 
-Lists can also contain other lists- this is referred to as nested lists or sub-lists.
+89. Lists can also contain other lists- this is referred to as nested lists or sub-lists.
 
 ```Python
 # create list with two sub-lists
@@ -644,7 +640,7 @@ points[1][0]
 
 #### Lists and the `in` Operator
 
-Like with strings, we can use the `in` operator to test if a list contains a specific value.
+90. Like with strings, we can use the `in` operator to test if a list contains a specific value.
 
 ```Python
 # checks if 0 is i numbers
@@ -654,11 +650,11 @@ Like with strings, we can use the `in` operator to test if a list contains a spe
 5 in numbers
 ```
 
-Both of these commands return Boolean `True` or `False` statements.
+91. Both of these commands return Boolean `True` or `False` statements.
 
 #### List Concatenation
 
-We can concatenate (or join) two lists using the `+` operator.
+92. We can concatenate (or join) two lists using the `+` operator.
 
 ```Python
 [0, 1, 2,] + [3, 4, 5]
@@ -666,7 +662,7 @@ We can concatenate (or join) two lists using the `+` operator.
 
 #### Copying
 
-We can copy a list using the `*` (multiplication) operator.
+93. We can copy a list using the `*` (multiplication) operator.
 
 ```Python
 [0, 1, 2] * 3
@@ -674,15 +670,15 @@ We can copy a list using the `*` (multiplication) operator.
 
 #### Sorting
 
-As with strings, we can sort the items in our list.
+94. As with strings, we can sort the items in our list.
 
-We have two options when sorting items in a list.
+95. We have two options when sorting items in a list.
 
-Sorting a list **in-place** changes the underlying order of items in the list.
+96. Sorting a list **in-place** changes the underlying order of items in the list.
 
-Generating a sorted version of a list **does not** change the underlying order of items in the list.
+97. Generating a sorted version of a list **does not** change the underlying order of items in the list.
 
-Let's look at a few examples using Python syntax.
+98. Let's look at a few examples using Python syntax.
 
 ```Python
 # create numbers list
@@ -711,11 +707,11 @@ sorted_numbers
 
 ##### Reverse
 
-We can reverse a list using the `.reverse()` method of the `reversed()` function.
+99. We can reverse a list using the `.reverse()` method of the `reversed()` function.
 
-As with `.sort()` and `sorted()`, we have the option to reverse in-place or generate a reversed version of the original list.
+100. As with `.sort()` and `sorted()`, we have the option to reverse in-place or generate a reversed version of the original list.
 
-To demonstrate using Python syntax:
+101. To demonstrate using Python syntax:
 
 ```Python
 # create list using range()
@@ -744,7 +740,7 @@ reversed_numbers
 
 #### Utility Functions
 
-A few other functions that come in handy when working with lists that contain numbers.
+102. A few other functions that come in handy when working with lists that contain numbers.
 - `sum()` calculates the sum of items in a list
 - `max()` identifies the highest value in a list
 - `min()` identifies the lowest value in a list
@@ -752,7 +748,7 @@ A few other functions that come in handy when working with lists that contain nu
 - `random.shuffle()` shuffles items in a list in-place
 - `random.sample()` samples a select number of items from a list
 
-Examples for each in Python syntax:
+103. Examples for each in Python syntax:
 
 ```Python
 # compute the sum of a list
@@ -799,40 +795,40 @@ random.sample(list, 2)
 
 ### Looking Ahead
 
-In the next lab, we'll talk all about conditional statements.
+104. In the next lab, we'll talk all about conditional statements.
 
-But for now, let's take a step back and think about how Python interacts with or treats the items in our list.
+105. But for now, let's take a step back and think about how Python interacts with or treats the items in our list.
 
-For example, when we're using the `in` operator, how does Python test for membership (i.e. see if the value we're looking for is located in the list)?
+106. For example, when we're using the `in` operator, how does Python test for membership (i.e. see if the value we're looking for is located in the list)?
 
-Python accomplishes this via **iteration**, which involves iterating over each item in the list. 
+107. Python accomplishes this via **iteration**, which involves iterating over each item in the list. 
 
-So Python starts at the first item in the list (index position `0`), and goes through each item on the list (left to right) until it reaches the end of the list.
+108. So Python starts at the first item in the list (index position `0`), and goes through each item on the list (left to right) until it reaches the end of the list.
 
-Again, we will have a whole lab on conditional statements, but a few quick examples for now just to illustrate the concept of iteration.
+109. Again, we will have a whole lab on conditional statements, but a few quick examples for now just to illustrate the concept of iteration.
 
-We can use a **`for` loop** to iterate over the items in a list.
+110. We can use a **`for` loop** to iterate over the items in a list.
 
 ```Python
 for number in numbers:
  print(number)
 ```
 
-We can iterate over just the indeces in the list.
+111. We can iterate over just the indeces in the list.
 
 ```Python
 for i in range(len(numbers)):
  print(number[i])
 ```
 
-We can retrieve the item and the index position using the `enumerate()` function.
+112. We can retrieve the item and the index position using the `enumerate()` function.
 
 ```Python
 for i, number in enumerate(numbers):
  print(i, number)
 ```
 
-Again, more to come on conditional statements.
+113. Again, more to come on conditional statements.
 
 ### Lab Notebook Questions on Lists with Numbers
 
@@ -858,76 +854,78 @@ Q13: Using the same list from the previous question, write a program that includ
 
 ## Lists With Strings
 
-Now let's put lists and strings together.
+114. Now let's put lists and strings together.
 
-In the previous section of the lab, we focused on lists consisting of numbers.
+115. In the previous section of the lab, we focused on lists consisting of numbers.
 
-Lists can also contain characters, or in this case, strings.
+116. Lists can also contain characters, or in this case, strings.
 
-37. Write a list of a few of your favorite things.
+117. Write a list of a few of your favorite things.
 ```Python
 cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
 ```
 
-38. We can print this list with a print function `print(cookies)`, but Python returns a representation of the list, just as we entered it.
+118. We can print this list with a print function `print(cookies)`, but Python returns a representation of the list, just as we entered it.
 `['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']`
 
-39. This isn’t particularly useful by itself; however, we can use the position of each item (the `index`) to perform different functions.
+119. This isn’t particularly useful by itself; however, we can use the position of each item (the `index`) to perform different functions.
 
-40. Add a `print()` function calling a specific item on your list.
+120. Add a `print()` function calling a specific item on your list.
 ```Python
 print(cookies[0].title())
 ```
 
-41. This command returns the first item on my list. This is the item in the `0` position on my list.
+121. This command returns the first item on my list. This is the item in the `0` position on my list.
 ```Python
 Chocolate Chip
 ```
 
-42. Items in a list are indexed with a number, **beginning with 0 NOT 1.**
+122. Items in a list are indexed with a number, **beginning with 0 NOT 1.**
 
-43. A `print` function that outputs the last item on my list of four items would look like this.
+123. A `print` function that outputs the last item on my list of four items would look like this.
 ```Python
 cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
 print(cookies[3].title())
 ```
 
-44. We can also work backwards (left-to-right) on our list using negative numbers. For example, to call the last item on the list we could also use the index position `-1`.
+124. We can also work backwards (left-to-right) on our list using negative numbers. For example, to call the last item on the list we could also use the index position `-1`.
 ```Python
 cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
 print(cookies[-1].title())
 ```
 
-45. To return the second to last item, we could use `-2`. For the third to last `-3`, etc.
+125. To return the second to last item, we could use `-2`. For the third to last `-3`, etc.
 
-46. We can concatenate our list items in strings.
+126. We can concatenate our list items in strings.
 ```Python
 cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
 print("My favorite cookie to bake is " + cookies[1].title() + ".")
 ```
-47. Which outputs `My favorite cookie to bake is snickerdoodle.`
 
-48. We can also change the items in a list. 
+127. Which outputs `My favorite cookie to bake is snickerdoodle.`
 
-49. Maybe I have a friend who is allergic to peanut butter. I can change the `peanut butter` entry.
+128. We can also change the items in a list. 
+
+129. Maybe I have a friend who is allergic to peanut butter. I can change the `peanut butter` entry.
 ```Python
 cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
 cookies[2] = 'oatmeal'
 print(cookies)
 ```
-50. The `print()` function outputs the modified list.
+
+130. The `print()` function outputs the modified list.
 `['chocolate chip', 'snickerdoodle', 'oatmeal', 'sugar']`
 
-51. We can also add data to our list using the append function.
+131. We can also add data to our list using the append function.
 ```Python
 cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
 cookies.append('oatmeal')
 print(cookies)
 ```
 
-52. The `print()` function now returns a list of five items `[chocolate chip, snickerdoodle, peanut butter, sugar, oatmeal]`
+132. The `print()` function now returns a list of five items `[chocolate chip, snickerdoodle, peanut butter, sugar, oatmeal]`
 
-53. We can also use `append()` to create new lists.
+133. We can also use `append()` to create new lists.
 ```Python
 my_pets = []
 my_pets.append('Christy Mathewson')
@@ -936,30 +934,31 @@ my_pets.append('Sandy Koufax')
 print(my_pets)
 ```
 
-54. In this block of code, we started with an empty list `[]`. Then the next two lines with `append()` add new items to the list.
+134. In this block of code, we started with an empty list `[]`. Then the next two lines with `append()` add new items to the list.
 
-55. With `append()`, items are added to the end of the list. 
+135. With `append()`, items are added to the end of the list. 
 
-56. The `insert()` function allows us to add items to any position in the list.
+136. The `insert()` function allows us to add items to any position in the list.
 ```Python
 fruit = ['apple', 'pear', 'banana']
 fruit.insert(1, 'orange')
 print(fruit)
 ```
-57. This block of code adds orange to the second position on the list (index position 1).
 
-58. The output is `['apple', 'orange', 'kiwi', 'banana']`
+137. This block of code adds orange to the second position on the list (index position 1).
 
-59. Conversely, the `del` statement allows you to delete items from your list using the index number.
+138. The output is `['apple', 'orange', 'kiwi', 'banana']`
 
-60. The following code will remove `orange` from the list.
+139. Conversely, the `del` statement allows you to delete items from your list using the index number.
+
+140. The following code will remove `orange` from the list.
 ```Python
 fruit = ['apple', 'orange', 'pear', 'banana']
 del fruit[1]
 print(fruit)
 ```
 
-61. We can also delete items by value (instead of position) using `remove()`.
+141. We can also delete items by value (instead of position) using `remove()`.
 ```Python
 fruit = ['apple', 'orange', 'pear', 'banana']
 fruit.remove('orange')
@@ -970,11 +969,11 @@ print(fruit)
 
 ### List Functions and String Elements
 
-Many of the list functions covered in the section of the lab focused on lists with numbers can also work on lists that contain strings.
+142. Many of the list functions covered in the section of the lab focused on lists with numbers can also work on lists that contain strings.
 
 #### `Len`
 
-64. To find the length of your list, use the `len()` function.
+143. To find the length of your list, use the `len()` function.
 ```Python
 fruit = ['apple', 'orange', 'pear', 'banana']
 length = len(fruit)
@@ -983,7 +982,7 @@ print(length)
 
 #### `Sort`
 
-63. To alphabetize your list, use the `sort()` method.
+144. To alphabetize your list, use the `sort()` method.
 ```Python
 fruit = ['apple', 'orange', 'pear', 'banana']
 fruit.sort()
@@ -992,7 +991,7 @@ print(fruit)
 
 #### `Reverse`
 
-62. To print in reverse order, use `reverse()`.
+145. To print in reverse order, use `reverse()`.
 ```Python
 fruit = ['apple', 'orange', 'pear', 'banana']
 fruit.reverse()
@@ -1001,7 +1000,7 @@ print(fruit)
 
 ### Lab Notebook Questions on Lists With Strings 
 
-35. To recap: Lists are an ordered collection of items. Lists can be numbers or strings. They are declared with a variable name, but the information is contained within `[ ]` and the individual items are separated by a comma. 
+146. To recap: Lists are an ordered collection of items. Lists can be numbers or strings. They are declared with a variable name, but the information is contained within `[ ]` and the individual items are separated by a comma. 
 
 Q14: Create your own list of strings. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?
 
@@ -1018,14 +1017,14 @@ Q15: Using the same list from the previous question, write a program that includ
 
 # How to submit this lab (and show your work)
 
-80. Moving forward, we'll submit lab notebooks as `.py` files. 
+147. Moving forward, we'll submit lab notebooks as `.py` files. 
 
-81. One option is to have a `.py` file that you use to run code and test programs while working through the lab. When ready to submit the lab notebook, you add comments and remove extraneous materials.
+148. One option is to have a `.py` file that you use to run code and test programs while working through the lab. When ready to submit the lab notebook, you add comments and remove extraneous materials.
 
-82. Another option is to have an "official" `.py` file that you are using as a lab notebook (separate from your working/testing file). Use comments in Python to note when you are starting a new question (as well as answering a question).
+149. Another option is to have an "official" `.py` file that you are using as a lab notebook (separate from your working/testing file). Use comments in Python to note when you are starting a new question (as well as answering a question).
   * Example: `Lab5_Notebook_Walden.py`
 
-83. What gets submitted as the lab notebook is the `Lab5_Notebook_Walden.py` file.
+150. What gets submitted as the lab notebook is the `Lab5_Notebook_Walden.py` file.
 - When in doubt, use comments
 - Be sure you are using comments to note what question you're responding to
  
