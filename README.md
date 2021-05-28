@@ -39,18 +39,20 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
     * [`in` operator](#in-operator)
     * [Search](#search)
 - [Lists](#lists)
-  * [List Length and Access](#list-length-and-access)
-  * [Modifying Lists](#modifying-lists)
-  * [Empty Lists](#empty-lists)
-  * [Nesting and Sub-Lists](#nesting-and-sublists)
-  * [Other List Operations](#other-list-operations)
-    * [Lists and the `in` Operator](#lists-and-the-in-operator)
-    * [List Concatenation](#list-concatenation)
-    * [Copying](#copying)
-    * [Sorting](#sorting)
-      * [Reverse](#reverse)
-    * [Utility Functions](#utility-functions)
-  * [Looking Ahead](#looking-ahead)
+  * [Lists With Numbers](#lists-with-numbers)
+    * [List Length and Access](#list-length-and-access)
+    * [Modifying Lists](#modifying-lists)
+    * [Empty Lists](#empty-lists)
+    * [Nesting and Sub-Lists](#nesting-and-sublists)
+    * [Other List Operations](#other-list-operations)
+      * [Lists and the `in` Operator](#lists-and-the-in-operator)
+      * [List Concatenation](#list-concatenation)
+      * [Copying](#copying)
+      * [Sorting](#sorting)
+        * [Reverse](#reverse)
+      * [Utility Functions](#utility-functions)
+    * [Looking Ahead](#looking-ahead)
+    * [Lab Notebook Questions on Lists With Numbers](#lab-notebook-questions-on-lists-with-numbers)
   * [Lists of Strings](#lists-of-strings)
 - [How to submit this lab (and show your work)](#how-to-submit-this-lab-and-show-your-work)
 - [Lab Notebook Questions](#lab-notebook-questions)
@@ -425,6 +427,8 @@ The individual values in a list are called elements or items.
 
 Lists have a type and are also considered values themselves.
 
+## Lists With Numbers
+
 ```Python
 # create a list containing 4 numbers
 [0, 1, 2, 3]
@@ -442,7 +446,7 @@ Although this is rare, list elements do not need to be the same type.
 [0, 1.0, 'a']
 ```
 
-## List Length and Access
+### List Length and Access
 
 We can use the `len` function to get the length of a list.
 
@@ -503,7 +507,7 @@ numbers[-1]
 numbers[-2]
 ```
 
-## Modifying Lists
+### Modifying Lists
 
 While strings are immutable, items in a list can be modified.
 
@@ -515,7 +519,7 @@ numbers[0] = 'zero'
 numbers
 ```
 
-### Growing Lists
+#### Growing Lists
 
 We can also grow an existing list using the `.append()` or `.extend()` methods.
 
@@ -535,7 +539,7 @@ The default `range()` function starts at `0`, but in this example we start at `5
 
 The default `range()` function moves by increments of `1` and stops before a specified number. In our example, `range()` stops before 8.
 
-### A Quick Detour Into `range()`
+#### A Quick Detour Into `range()`
 
 The core syntax for range:
 `range(start, stop, step)`
@@ -583,7 +587,7 @@ Try to write a program that outputs the list: `[2, 4, 8, 16, 32, 64, 128, 256]`.
 
 <blockquote>Hint: a double astrisk (**) represents exponents in Python. So 2<sup>2</sup> would be 2**2.</blockquote>
 
-### Deleting Items from Lists
+#### Deleting Items from Lists
 
 
 We can delete items from a list using the `pop()` method or the `del` statement.
@@ -596,7 +600,7 @@ numbers.pop(0)
 del numbers[0]
 ```
 
-## Empty Lists
+### Empty Lists
 
 A list with no items is called an empty list.
 
@@ -612,7 +616,7 @@ Examples in Python syntax:
 list()
 ```
 
-## Nesting and Sublists
+### Nesting and Sublists
 
 Lists can also contain other lists- this is referred to as nested lists or sub-lists.
 
@@ -629,7 +633,7 @@ points[0]
 points[1][0]
 ```
 
-## Lists and the `in` Operator
+### Lists and the `in` Operator
 
 Like with strings, we can use the `in` operator to test if a list contains a specific value.
 
@@ -643,7 +647,7 @@ Like with strings, we can use the `in` operator to test if a list contains a spe
 
 Both of these commands return Boolean `True` or `False` statements.
 
-## List Concatenation
+### List Concatenation
 
 We can concatenate (or join) two lists using the `+` operator.
 
@@ -651,7 +655,7 @@ We can concatenate (or join) two lists using the `+` operator.
 [0, 1, 2,] + [3, 4, 5]
 ```
 
-## Copying
+### Copying
 
 We can copy a list using the `*` (multiplication) operator.
 
@@ -659,7 +663,7 @@ We can copy a list using the `*` (multiplication) operator.
 [0, 1, 2] * 3
 ```
 
-## Sorting
+### Sorting
 
 As with strings, we can sort the items in our list.
 
@@ -696,7 +700,7 @@ sorted_numbers = sorted(numbers)
 sorted_numbers
 ```
 
-### Reverse
+#### Reverse
 
 We can reverse a list using the `.reverse()` method of the `reversed()` function.
 
@@ -729,7 +733,7 @@ reversed_numbers = reversed(numbers)
 reversed_numbers
 ```
 
-## Utility Functions
+### Utility Functions
 
 A few other functions that come in handy when working with lists that contain numbers.
 - `sum()` calculates the sum of items in a list
@@ -784,7 +788,7 @@ random.shuffle(list)
 random.sample(list, 2)
 ```
 
-## Looking Ahead
+### Looking Ahead
 
 In the next lab, we'll talk all about conditional statements.
 
@@ -821,7 +825,7 @@ for i, number in enumerate(numbers):
 
 Again, more to come on conditional statements.
 
-## Lab Notebook Questions on Lists with Numbers
+### Lab Notebook Questions on Lists with Numbers
 
 Q12: Create the list numbers with the following values: `[[0, 1], [2, 3], [4, 5]]`.
 - What is the second element?
@@ -843,7 +847,7 @@ Q10: Using the same list from the previous question, write a program that includ
 - Selects a list element at random
 - Shuffles your list
 
-## Lists of Strings
+## Lists With Strings
 
 Now let's put lists and strings together.
 
@@ -955,11 +959,11 @@ print(fruit)
 
 <blockquote><code>remove</code> only removes the first instance of the value in the list. So, if in the previous example orange appeared on the list a second time, only the first instance would be removed. To remove all instances, you would need to perform a loop (we’ll talk about loops later in the semester).</blockquote>
 
-## List Functions and String Elements
+### List Functions and String Elements
 
 Many of the list functions covered in the section of the lab focused on lists with numbers can also work on lists that contain strings.
 
-### `Len`
+#### `Len`
 
 64. To find the length of your list, use the `len()` function.
 ```Python
@@ -968,7 +972,7 @@ length = len(fruit)
 print(length)
 ```
 
-### `Sort`
+#### `Sort`
 
 63. To alphabetize your list, use the `sort()` method.
 ```Python
@@ -986,7 +990,7 @@ fruit.reverse()
 print(fruit)
 ```
 
-## Lab Notebook Questions on Lists With Strings 
+### Lab Notebook Questions on Lists With Strings 
 
 35. To recap: Lists are an ordered collection of items. Lists can be numbers or strings. They are declared with a variable name, but the information is contained within `[ ]` and the individual items are separated by a comma. 
 
