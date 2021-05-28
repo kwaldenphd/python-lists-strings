@@ -25,16 +25,36 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
 
 # Table of Contents
 - [Python Syntax: Methods and Functions](#python-syntax-methods-and-functions)
-- [Working With Strings and Variables](#working-with-strings-and-variables)
-- [Combining Variable Types](#combining-variable-types)
-- [Working With Lists](#working-with-lists)
-  * [A List of Strings](#a-list-of-strings)
-    * [A few additional functions that can be useful when working with lists](#a-few-additional-functions-that-can-be-useful-when-working-with-lists)
-  * [A List of Numbers](#a-list-of-numbers)
+- [Variables](#variables)
+- [Strings](#strings)
+  * [Title Methods](#title-methods)
+  * [Concatenation](#concatenation)
+  * [Combining Variable Types](#combining-variable-types)
+  * [String Length and Access](#string-length-and-access)
+  * [Other String Operations](#other-string-operations)
+    * [Length](#length)
+    * [Properties](#properties)
+    * [Sort](#sort)
+    * [Max and Min](#max-and-min)
+    * [`in` operator](#in-operator)
+    * [Search](#search)
+- [Lists](#lists)
+  * [List Length and Access](#list-length-and-access)
+  * [Modifying Lists](#modifying-lists)
+  * [Empty Lists](#empty-lists)
+  * [Nesting and Sub-Lists](#nesting-and-sublists)
+  * [Other List Operations](#other-list-operations)
+    * [Lists and the `in` Operator](#lists-and-the-in-operator)
+    * [List Concatenation](#list-concatenation)
+    * [Copying](#copying)
+    * [Sorting](#sorting)
+      * [Reverse](#reverse)
+    * [Utility Functions](#utility-functions)
+  * [Looking Ahead](#looking-ahead)
+  * [Lists of Strings](#lists-of-strings)
 - [How to submit this lab (and show your work)](#how-to-submit-this-lab-and-show-your-work)
 - [Lab Notebook Questions](#lab-notebook-questions)
   
-
 # Python Syntax: Methods and Functions
 
 1. Python has some specific terminology used to describe elements of code.
@@ -327,7 +347,7 @@ max(first_name)
 min(first_name)
 ```
 
-### In Operator
+### `in` Operator
 
 We can also use the `in` operator to check if a character or substring (combination of characters) is present in another string.
 
@@ -395,7 +415,7 @@ print ("The index number for the letter u within the word " + color + " is", ind
 
 <blockquote>Q8: Modify the program to have it search for other characters in the string. Does it always return the index number you expect? What index is returned if you ask for the index of the letter u (i.e., what happens when the desired character appears more than once in the string)?</blockquote>
 
-# Working With Lists
+# Lists
 
 34. Python allows us to store information in a few different ways. 
 
@@ -559,7 +579,7 @@ points[0]
 points[1][0]
 ```
 
-## Lists and the In Operator
+## Lists and the `in` Operator
 
 Like with strings, we can use the `in` operator to test if a list contains a specific value.
 
@@ -573,7 +593,7 @@ Like with strings, we can use the `in` operator to test if a list contains a spe
 
 Both of these commands return Boolean `True` or `False` statements.
 
-## Concatenation
+## List Concatenation
 
 We can concatenate (or join) two lists using the `+` operator.
 
