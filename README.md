@@ -575,11 +575,197 @@ Both of these commands return Boolean `True` or `False` statements.
 
 ## Concatenation
 
+We can concatenate (or join) two lists using the `+` operator.
+
+```Python
+[0, 1, 2,] + [3, 4, 5]
+```
+
 ## Copying
+
+We can copy a list using the `*` (multiplication) operator.
+
+```Python
+[0, 1, 2] * 3
+```
 
 ## Sorting
 
-### Revers
+As with strings, we can sort the items in our list.
+
+We have two options when sorting items in a list.
+
+Sorting a list **in-place** changes the underlying order of items in the list.
+
+Generating a sorted version of a list **does not** change the underlying order of items in the list.
+
+Let's look at a few examples using Python syntax.
+
+```Python
+# create numbers list
+numbers = [2, 4, 1, 3]
+
+# sort list in place to update list order
+numbers.sort()
+
+# show updated list
+numbers
+```
+
+```Python
+# generate sorted version of list; DOES NOT change underlying order
+sorted(numbers)
+
+# will return original list order
+numbers
+
+# assign results of sorted() to new variable
+sorted_numbers = sorted(numbers)
+
+# show new variable with sorted list
+sorted_numbers
+```
+
+### Reverse
+
+We can reverse a list using the `.reverse()` method of the `reversed()` function.
+
+As with `.sort()` and `sorted()`, we have the option to reverse in-place or generate a reversed version of the original list.
+
+To demonstrate using Python syntax:
+
+```Python
+# create list using range()
+numbers = range(0, 7)
+
+# reverse list in-place
+numbers.reverse()
+
+# show reversed list
+numbers
+```
+
+```Python
+# generate reversed version of list
+reversed(numbers)
+
+# show original list
+numbers
+
+# create new variable with reversed list
+reversed_numbers = reversed(numbers)
+
+# show new varaible with reversed list
+reversed_numbers
+```
+
+## Utility Functions
+
+A few other functions that come in handy when working with lists that contain numbers.
+- `sum()` calculates the sum of items in a list
+- `max()` identifies the highest value in a list
+- `min()` identifies the lowest value in a list
+- `random.choice()` selects a list item at random
+- `random.shuffle()` shuffles items in a list in-place
+- `random.sample()` samples a select number of items from a list
+
+Examples for each in Python syntax:
+
+```Python
+# compute the sum of a list
+sum([0, 1, 2, 3])
+
+# assign list to variable 
+list = ([0, 1, 2, 3])
+
+# compute sum of list using variable name
+sum(list)
+```
+
+```Python
+# find max value of list
+max([0, 1, 2, 3])
+
+# find max value of list using variable name
+max(list)
+```
+
+```Python
+# find min value of list
+min([0, 1, 2, 3])
+
+# find min value using list variable
+min(list)
+```
+
+```Python
+# select element at random
+random.choice(list)
+```
+
+```Python
+# shuffle a list in-place
+random.shuffle(list)
+```
+
+```Python
+# sample 2 elements from a list
+# core syntax: random.sample(list_name, number_of_elements)
+random.sample(list, 2)
+```
+
+## Looking Ahead
+
+In the next lab, we'll talk all about conditional statements.
+
+But for now, let's take a step back and think about how Python interacts with or treats the items in our list.
+
+For example, when we're using the `in` operator, how does Python test for membership (i.e. see if the value we're looking for is located in the list)?
+
+Python accomplishes this via **iteration**, which involves iterating over each item in the list. 
+
+So Python starts at the first item in the list (index position `0`), and goes through each item on the list (left to right) until it reaches the end of the list.
+
+Again, we will have a whole lab on conditional statements, but a few quick examples for now just to illustrate the concept of iteration.
+
+We can use a **`for` loop** to iterate over the items in a list.
+
+```Python
+for number in numbers:
+ print(number)
+```
+
+We can iterate over just the indeces in the list.
+
+```Python
+for i in range(len(numbers)):
+ print(number[i])
+```
+
+We can retrieve the item and the index position using the `enumerate()` function.
+
+```Python
+for i, number in enumerate(numbers):
+ print(i, number)
+```
+
+Again, more to come on conditional statements.
+
+<blockquote>Q9: Create your own list of numbers. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?</blockquote>
+
+<blockquote>Q10: Using the same list from the previous question, write a program that includes the following steps or components:
+<ol type="a">
+ <li>Adds a new item to your list</li>
+ <li>Deletes an item from your list</li>
+ <li>Sorts your list in-place</li>
+ <li>Generates a sorted version of your list</li>
+ <li>Reverse sorts your list in-place</li>
+ <li>Generates a reverse sorted version of your list</li>
+ <li>Determines the <code>min</code> and <code>max</code> values for your list</li>
+ <li>Selects an list element at random</li>
+ <li>Shuffles your list</li>
+</ol>
+</blockquote>
 
 ## Lists of Strings
 
@@ -653,6 +839,7 @@ print(cookies)
 my_pets = []
 my_pets.append('Christy Mathewson')
 my_pets.append('Smoky Jo Wood')
+my_pets.append('Sandy Koufax')
 print(my_pets)
 ```
 
@@ -718,9 +905,9 @@ print(length)
 ```
 35. To recap: Lists are an ordered collection of items. Lists can be numbers or strings. They are declared with a variable name, but the information is contained within `[ ]` and the individual items are separated by a comma. 
 
-<blockquote>Q9: Create your own list of strings. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?</blockquote>
+<blockquote>Q11: Create your own list of strings. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?</blockquote>
 
-<blockquote>Q10: Using the same list from the previous question, write a program that includes the following steps or components:
+<blockquote>Q12: Using the same list from the previous question, write a program that includes the following steps or components:
 <ol type="a">
  <li>Adds a new item to your list</li>
  <li>Deletes an item from your list</li>
