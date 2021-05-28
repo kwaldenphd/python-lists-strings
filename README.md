@@ -1047,9 +1047,22 @@ Q7: Write a program that prompts the user to enter a 6-letter word, and then pri
 
 Q8: Modify the program to have it search for other characters in the string. Does it always return the index number you expect? What index is returned if you ask for the index of the letter u (i.e., what happens when the desired character appears more than once in the string)?
 
-Q9: Create your own list of strings. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?
+Q9: How would you modify this code to output the full range 1-10?
 
-Q10: Using the same list from the previous question, write a program that includes the following steps or components:
+Q10: How would you rewrite the code to include only the even numbers from 1 to 10?
+
+Q11: Create the list `numbers` with the following values: `[[0, 1], [2, 3], [4, 5]]`
+<ol type="a">
+  <li>What is the second element?</li>
+  <li>How would you change 4 to 'four'?</li>
+  <li>How would you change 1 to 'one'?</li>
+  <li>How would you print out each sub-list (one sub-list per line)?</li>
+  <li>How would you print out each number (one number per line)?</li>
+ </ol>
+
+Q12: Create your own list of numbers. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?
+
+Q13: Using the same list from the previous question, write a program that includes the following steps or components:
 <ol type="a">
  <li>Adds a new item to your list</li>
  <li>Deletes an item from your list</li>
@@ -1062,13 +1075,17 @@ Q10: Using the same list from the previous question, write a program that includ
  <li>Shuffles your list</li>
 </ol>
 
-Q11: How would you rewrite the code to include only the even numbers from 1 to 10?
+Q14: Create your own list of strings. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?
 
-Q12: Create the list `numbers` with the following values: `[[0, 1], [2, 3], [4, 5]]`
+Q15: Using the same list from the previous question, write a program that includes the following steps or components:
 <ol type="a">
-  <li>What is the second element?</li>
-  <li>How would you change 4 to 'four'?</li>
-  <li>How would you change 1 to 'one'?</li>
-  <li>How would you print out each sub-list (one sub-list per line)?</li>
-  <li>How would you print out each number (one number per line)?</li>
- </ol>
+ <li>Adds a new item to your list</li>
+ <li>Deletes an item from your list</li>
+ <li>Sorts your list in-place</li>
+ <li>Generates a sorted version of your list</li>
+ <li>Reverse sorts your list in-place</li>
+ <li>Generates a reverse sorted version of your list</li>
+ <li>Determines the <code>min</code> and <code>max</code> values for your list</li>
+ <li>Selects an list element at random</li>
+ <li>Shuffles your list</li>
+</ol>
