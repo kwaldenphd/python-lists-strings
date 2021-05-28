@@ -145,19 +145,13 @@ print(name.title())
 
 17. We can also change the case using the `upper()` method and `lower()` method: `print(name.upper())` outputs your string with all capital letters, while `print(name.lower())` outputs your string in all lower case.
 
-`Katherine Walden`
-`KATHERINE WALDEN`
-`katherine walden`
+- `Katherine Walden`
+- `KATHERINE WALDEN`
+- `katherine walden`
 
 18. Try adding two additional `print()` functions calling the `name` variable with each of these methods.  
 
-<blockquote>Q2: Describe the syntax of the three commands that we just used (steps 10-14) in your own words. What is this code doing? Define the function and method for each example.</blockquote>
-
-```Python
-first_name = "katherine"
-last_name = "walden"
-full_name = first_name + " " + last name
-```
+<blockquote>Q2: Describe the syntax of the three print statements generated in steps 14-18 in your own words. What is this code doing? Define the function and method for each example.</blockquote>
 
 ## Concatenation
 
@@ -182,6 +176,9 @@ print("Hello, " + full_name.title() + "!")
 ```
 
 22. We could combine strings and variables in the same `print()` function to output a full sentence to the screen.
+
+23. We could also assign this whole sentence to a variable and return the same output.
+
 ```Python
 first_name = "katherine"
 last_name = "walden"
@@ -192,9 +189,7 @@ sentence="Hello, " + full_name.title() + "!"
 print(sentence)
 ```
 
-23. We could also assign this whole sentence to a variable and return the same output.
-
-<blockquote>Q3: Explain how each of these two programs (steps 15-18) work in your own words.</blockquote>
+<blockquote>Q3: Explain how each of these two programs (steps 20-23) work in your own words.</blockquote>
 
 ### Combining Variable Types
 
@@ -571,7 +566,6 @@ numbers
 
 ```Python
 # in this example we'll wrap the list() function around the range() function to create a list of numbers
-
 numbers = list(range(1,10))
 print(numbers)
 ```
@@ -828,7 +822,7 @@ for i, number in enumerate(numbers):
  print(i, number)
 ```
 
-113. Again, more to come on conditional statements.
+113. Again, more to come on conditional statements and loops.
 
 ### Lab Notebook Questions on Lists with Numbers
 
