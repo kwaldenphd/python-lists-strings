@@ -5,9 +5,10 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
 
 ## Lab Objectives
 - Practice utilizing lists and strings in the Python programming language
+  * For strings, this includes creation, length and access, basic list operations, and basic method arguments
+  * For lists, this includes creation, access, iteration, nesting, searching, concatenating, growing, deleting, sorting, and reversing
 - Understand and articulate the differences between lists and strings
 - Use Python methods and functions to work with strings and numbers
-- Assign variables, concatenate strings, and create lists
 
 ## Acknowledgements
 
@@ -50,7 +51,7 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
 
 # Working With Strings and Variables
 
-7. We worked with variables in Lab #5. A variable is a placeholder for a piece of information. You can think of it as a basket or container. 
+7. We worked with variables in our first Python lab. A variable is a placeholder for a piece of information. You can think of it as a basket or container. 
 
 8. Python has a few rules for variables:
 - Variable names can only include letter, numbers, or underscores, but cannot start with a number.
@@ -60,9 +61,34 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
 
 <blockquote>Q1: In your own words, explain the difference between <code>print(hello)</code> and <code>print(“hello”)</code>.</blockquote>
 
-9. Refresh: What are strings? A string is a sequence of characters.Although we can have list of characters, often times we want to access and manipulate the sequence as an aggregate set of text rather than individual letters. Strings are identified by the <code>“ ”</code> or alternatively by <code>‘ ’</code>.
+9. Refresh: What are strings? A string is a sequence of characters. Although we can have list of characters, often times we want to access and manipulate the sequence as an aggregate set of text rather than individual letters. Strings are identified by the <code>“ ”</code> or alternatively by <code>‘ ’</code>.
 
-10. Python has a few built-in functions for working with strings. Assign your first and last name to the variable `name` in all lower-case letters.
+```Python
+# example that creates a new string variable
+first_name = 'Katherine'
+
+# check variable type
+type(first_name)
+
+# view value of first_name variable
+first_name
+```
+
+```Python
+# example that converts integer to string
+str(10)
+
+# example that converts float to string
+str(15.0)
+
+# example that converts boolean to string
+str(True)
+```
+
+10. Because certain operations on strings are so common, Python includes a variety of built-in methods that you can apply to a string object:
+
+11. Let's look at an example that uses different title methods.
+
 ```Python
 # example using my name
 name = "katherine walden"
@@ -163,13 +189,37 @@ print("Welcome to " + course_name.title() + " CSE:" + str(course_number))
 
 <blockquote>Q6: Write a program that converts integer, float, or boolean values to a string, using the <code>str</code> function.</code></blockquote>
 
+# String Length and Access
+
+We can get the length or size of a string by using the `len` function.
+
+```Python
+len(first_name)
+```
+
 27. We can also extract (or modify) individual characters within a string. To do so, we need a way to specify which character we mean. 
 
-28. This is done by giving each position in the string an `index number`, which is determined by simply counting off (starting at 0) from left to right. 
+28. This is done by giving each position in the string an `index number` or `index operator`, which is determined by simply counting off (starting at 0) from left to right. 
 
 29. We then use the index number as a subscript into the string. 
 
-30. For example, if the variable `color` includes the string `"turquoise"`, then
+```Python
+# access first character in string
+first_name[0]
+
+# access last character in string
+first_name[-1]
+```
+
+30. In Python there is no notion of a character type as there is in languages such as Java or C. So when we check the type for a character in a string, we get back another string.
+
+```Python
+type(first_name[0])
+```
+
+30. Another example: let's say we have a variable `color` that includes the string `"turquoise"`.
+
+32. Then...
 - `color[0]` holds the letter `t`
 - `color[1]` holds the letter `u`
 - `color[2]` holds the letter `r`
@@ -182,10 +232,155 @@ print("Welcome to " + course_name.title() + " CSE:" + str(course_number))
 Please enter a 6-letter word: joyful
 The first, third, and fifth letters are: j y u
 ```
+NOTE: Strings in Python are immutable, which means that you cannot change the elements of a string once it is set.
 
-32. We can also instruct the computer to search for a given character within a string, using a method called `index()`. 
+The following program will result in a `TypeError`.
 
-33. For example, we have a variable `color` holds the string `"turquoise"`. We can retrieve the index of the letter `q` (which is 3) as follows:
+```Python
+first_name[0] = 'k'
+```
+So what do you do when you want to update a string? You simply construct a new one!
+
+```Python
+first_name = 'k' + first_name[1:]
+first_name
+```
+## Other String Operations
+
+Since a string is a sequence of characters, there are a few other operations that work on strings.
+
+### Length
+
+We've already seen the `len` function in action, but to refresh:
+
+```Python
+len(first_name)
+```
+
+### Properties
+
+We can check the properties of characters in a string.
+- `.isalpha()` checks if all string values are letters
+- `.isalnum()` checks if string includes only letters and numbers
+- `.isdigit()` checks if all string values are numbers
+- `.islower()` checks if all string includes any lower-case characters
+- `.isspace()` checks if the string includes any whitespace characters
+- `.istitle()` checks if the string includes any title-case characters
+- `.isupper()` checks if the string includes any upper-case characters
+
+To see these string property methods in action in Python syntax:
+
+```Python
+# checks if all string values are letters
+'abc123'.isalpha()
+
+# checks if string values are letters and numbers
+'abc123'.isalnum()
+
+# checks if all string values are numbers
+'abc123'.isdigit()
+
+# checks if string includes any lower-case characters
+'abc123'.islower()
+
+# checks if string includes any whitespace characters
+'abc123'.isspace()
+
+# checks if string includes any title-case characters
+'abc123'.istitle()
+
+# checks if string includes any upper-case characters
+'abc123'.isupper()
+```
+
+These commands return Boolean `True` or `False` values.
+
+### Sort
+
+We can sort characters in a string alphabetically or reverse alphabetically.
+
+```Python
+# sort alphabetically
+sorted(first_name)
+
+# reverse sort
+reversed(first_name)
+```
+
+These commands output the characters in the string in alphabetical or reverse alphabetical order.
+
+### Max and Min
+
+We can also get the maximum or minimum value in the string. For strings that are sequences of characters, the minimum value is the character that appears first in the English-language alphabet, and the maximum is the character that appears last in the English-language alphabet.
+
+```Python
+# get max string letter
+max(first_name)
+
+# get min string letter
+min(first_name)
+```
+
+### In Operator
+
+We can also use the `in` operator to check if a character or substring (combination of characters) is present in another string.
+
+```Python
+# checks is 'a' is in 'abcd' string
+'a' in 'abcd'
+
+# checks if 'e' is in 'abcd' string
+'e' in 'abcd'
+
+# checks if 'bc' is in 'abcd' string
+'bc' in 'abcd'
+```
+
+Each of these `in` operator examples returns a Boolean value, `True` or `False`.
+
+
+### Search
+
+32. We can also instruct the computer to search for a given character within a string.
+
+34. There are a few different search methods we can use with strings:
+ - `.startswith()` checks if the string starts with a character or substring
+ - `.endswith()` checks if the string ends with a character or substring
+ - `.find()` locates the index position for a specific character or substring
+ - `.index()` also locates the index position for a specific character or substring
+ 
+ NOTE: The `.find()` method returns `-1` if the character or substring is not found. The `.index()` method will throw an error if the character or substring is not found.
+ 
+ To see these methods in action using Python syntax:
+ 
+ ```Python
+ # checks if string starts with 'the' substring
+'the boy who blocked his own shot'.startswith('the')
+
+# checks if string ends with 'shot' substring
+the boy who blocked his own shot'.endswith('shot')
+
+# locates index position for 'who' substring
+# note .find() outputs the index position for the first character in the substring
+'the boy who blocked his own shot'.find('who') 
+
+# checks if 'who' substring is located at index position 10
+# note -1 return means the substring was not located at that position
+'the boy who blocked his own shot'.find('who', 10)
+
+# locates index position for 'who' substring
+'the boy who blocked his own shot'.index('who') 
+
+# checks if 'who' substring is located at index position 10
+# unlike .find(), .index() will return a ValueError if the substring is located at that position
+'the boy who blocked his own shot'.index('who', 10)
+```
+
+33. Let's look at another example.
+
+Say we have a variable `color` holds the string `"turquoise"`. 
+
+We can retrieve the index of the letter `q` (which is 3) as follows:
 ```python
 color = "turquoise"
 index_number = color.index("q")
