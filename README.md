@@ -42,6 +42,9 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
   * [Lists With Numbers](#lists-with-numbers)
     * [List Length and Access](#list-length-and-access)
     * [Modifying Lists](#modifying-lists)
+      * [Growing Lists](#growing-lists)
+      * [A Quick Detour Into `range()`](#a-quick-detour-into-range)
+      * [Deleting Items From Lists](#deleting-items-from-lists)
     * [Empty Lists](#empty-lists)
     * [Nesting and Sub-Lists](#nesting-and-sublists)
     * [Other List Operations](#other-list-operations)
@@ -53,7 +56,12 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
       * [Utility Functions](#utility-functions)
     * [Looking Ahead](#looking-ahead)
     * [Lab Notebook Questions on Lists With Numbers](#lab-notebook-questions-on-lists-with-numbers)
-  * [Lists of Strings](#lists-of-strings)
+  * [Lists With Strings](#lists-with-strings)
+    * [List Functions and String Elements](#list-functions-and-string-elements)
+      * [`Len`](#len)
+      * [`Sort`](#sort)
+      * [`Reverse`](#reverse)
+    * [Lab Notebook Questions on Lists With Strings](#lab-notebook-questions-on-lists-with-strings)
 - [How to submit this lab (and show your work)](#how-to-submit-this-lab-and-show-your-work)
 - [Lab Notebook Questions](#lab-notebook-questions)
   
@@ -589,7 +597,6 @@ Try to write a program that outputs the list: `[2, 4, 8, 16, 32, 64, 128, 256]`.
 
 #### Deleting Items from Lists
 
-
 We can delete items from a list using the `pop()` method or the `del` statement.
 
 ```Python
@@ -633,7 +640,9 @@ points[0]
 points[1][0]
 ```
 
-### Lists and the `in` Operator
+### Other List Operations
+
+#### Lists and the `in` Operator
 
 Like with strings, we can use the `in` operator to test if a list contains a specific value.
 
@@ -647,7 +656,7 @@ Like with strings, we can use the `in` operator to test if a list contains a spe
 
 Both of these commands return Boolean `True` or `False` statements.
 
-### List Concatenation
+#### List Concatenation
 
 We can concatenate (or join) two lists using the `+` operator.
 
@@ -655,7 +664,7 @@ We can concatenate (or join) two lists using the `+` operator.
 [0, 1, 2,] + [3, 4, 5]
 ```
 
-### Copying
+#### Copying
 
 We can copy a list using the `*` (multiplication) operator.
 
@@ -663,7 +672,7 @@ We can copy a list using the `*` (multiplication) operator.
 [0, 1, 2] * 3
 ```
 
-### Sorting
+#### Sorting
 
 As with strings, we can sort the items in our list.
 
@@ -700,7 +709,7 @@ sorted_numbers = sorted(numbers)
 sorted_numbers
 ```
 
-#### Reverse
+##### Reverse
 
 We can reverse a list using the `.reverse()` method of the `reversed()` function.
 
@@ -733,7 +742,7 @@ reversed_numbers = reversed(numbers)
 reversed_numbers
 ```
 
-### Utility Functions
+#### Utility Functions
 
 A few other functions that come in handy when working with lists that contain numbers.
 - `sum()` calculates the sum of items in a list
@@ -981,7 +990,7 @@ fruit.sort()
 print(fruit)
 ```
 
-### `Reverse`
+#### `Reverse`
 
 62. To print in reverse order, use `reverse()`.
 ```Python
