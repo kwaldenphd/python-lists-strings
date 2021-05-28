@@ -565,7 +565,7 @@ numbers = list(range(1,10))
 print(numbers)
 ```
 
-<blockquote>QX: Q8: How would you modify this code to output the full range 1-10?</blockquote>
+<blockquote>Q9: How would you modify this code to output the full range 1-10?</blockquote>
 
 What if we just wanted the odd numbers in this range? 
 
@@ -578,7 +578,7 @@ numbers = list(range(1,11,2))
 print(numbers)
 ```
 
-<blockquote>QX: How would you rewrite the code to include only the even numbers from 1 to 10?</blockquote>
+<blockquote>Q10: How would you rewrite the code to include only the even numbers from 1 to 10?</blockquote>
 
 Can you write a program that creates a list that represents all of the different patterns we could represent from 1 bit to 8 bits, like our chart from binary math lab?
 - 1 bit - 2 patterns
@@ -836,16 +836,16 @@ Again, more to come on conditional statements.
 
 ### Lab Notebook Questions on Lists with Numbers
 
-Q12: Create the list numbers with the following values: `[[0, 1], [2, 3], [4, 5]]`.
+Q11: Create the list numbers with the following values: `[[0, 1], [2, 3], [4, 5]]`.
 - What is the second element?
 - How would you change 4 to 'four'?
 - How would you change 1 to 'one'?
 - How would you print out each sub-list (one sub-list per line)?
 - How would you print out each number (one number per line)?
 
-Q9: Create your own list of numbers. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?
+Q12: Create your own list of numbers. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?
 
-Q10: Using the same list from the previous question, write a program that includes the following steps or components:
+Q13: Using the same list from the previous question, write a program that includes the following steps or components:
 - Adds a new item to your list
 - Deletes an item from your list
 - Sorts your list in-place
@@ -1003,9 +1003,9 @@ print(fruit)
 
 35. To recap: Lists are an ordered collection of items. Lists can be numbers or strings. They are declared with a variable name, but the information is contained within `[ ]` and the individual items are separated by a comma. 
 
-Q11: Create your own list of strings. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?
+Q14: Create your own list of strings. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?
 
-Q10: Using the same list from the previous question, write a program that includes the following steps or components:
+Q15: Using the same list from the previous question, write a program that includes the following steps or components:
 - Adds a new item to your list
 - Deletes an item from your list
 - Sorts your list in-place
