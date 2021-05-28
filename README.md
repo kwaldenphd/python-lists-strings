@@ -515,6 +515,8 @@ numbers[0] = 'zero'
 numbers
 ```
 
+### Growing Lists
+
 We can also grow an existing list using the `.append()` or `.extend()` methods.
 
 ```Python
@@ -533,8 +535,56 @@ The default `range()` function starts at `0`, but in this example we start at `5
 
 The default `range()` function moves by increments of `1` and stops before a specified number. In our example, `range()` stops before 8.
 
+### A Quick Detour Into `range()`
+
 The core syntax for range:
 `range(start, stop, step)`
+
+You may have expected to see the numbers one to ten printed. This is yet another example of the quirks of working with programming languages.
+
+Python starts with the first number and quits when it reaches the last number of your range. Because it stops at 10, it doesn’t include the 10.
+
+We can actually create lists using `range()`.
+
+```Python
+# in this example we'll wrap the list() function around the range() function to create a list of numbers
+
+numbers = list(range(1,10))
+print(numbers)
+```
+
+<blockquote>QX: Q8: How would you modify this code to output the full range 1-10?</blockquote>
+
+What if we just wanted the odd numbers in this range? 
+
+We could add an additional value to the range function to tell the computer to count by two.
+
+A example that changes the step interval.
+
+```Python
+numbers = list(range(1,11,2))
+print(numbers)
+```
+
+<blockquote>QX: How would you rewrite the code to include only the even numbers from 1 to 10?</blockquote>
+
+Can you write a program that creates a list that represents all of the different patterns we could represent from 1 bit to 8 bits, like our chart from binary math lab?
+- 1 bit - 2 patterns
+- 2 bits - 4
+- 3 bits - 8
+- 4 bits - 16
+- 5 bits - 32
+- 6 bits - 64
+- 7 bits - 128
+- 8 bits - 256
+- n bits -2n patterns
+
+Try to write a program that outputs the list: `[2, 4, 8, 16, 32, 64, 128, 256]`.
+
+<blockquote>Hint: a double astrisk (**) represents exponents in Python. So 2<sup>2</sup> would be 2**2.</blockquote>
+
+### Deleting Items from Lists
+
 
 We can delete items from a list using the `pop()` method or the `del` statement.
 
@@ -771,25 +821,35 @@ for i, number in enumerate(numbers):
 
 Again, more to come on conditional statements.
 
-<blockquote>Q9: Create your own list of numbers. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?</blockquote>
+## Lab Notebook Questions on Lists with Numbers
 
-<blockquote>Q10: Using the same list from the previous question, write a program that includes the following steps or components:
-<ol type="a">
- <li>Adds a new item to your list</li>
- <li>Deletes an item from your list</li>
- <li>Sorts your list in-place</li>
- <li>Generates a sorted version of your list</li>
- <li>Reverse sorts your list in-place</li>
- <li>Generates a reverse sorted version of your list</li>
- <li>Determines the <code>min</code> and <code>max</code> values for your list</li>
- <li>Selects an list element at random</li>
- <li>Shuffles your list</li>
-</ol>
-</blockquote>
+Q12: Create the list numbers with the following values: `[[0, 1], [2, 3], [4, 5]]`.
+- What is the second element?
+- How would you change 4 to 'four'?
+- How would you change 1 to 'one'?
+- How would you print out each sub-list (one sub-list per line)?
+- How would you print out each number (one number per line)?
+
+Q9: Create your own list of numbers. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?
+
+Q10: Using the same list from the previous question, write a program that includes the following steps or components:
+- Adds a new item to your list
+- Deletes an item from your list
+- Sorts your list in-place
+- Generates a sorted version of your list
+- Reverse sorts your list in-place
+- Generates a reverse sorted version of your list
+- Determiens the `min` and `max` values for your list
+- Selects a list element at random
+- Shuffles your list
 
 ## Lists of Strings
 
-We 
+Now let's put lists and strings together.
+
+In the previous section of the lab, we focused on lists consisting of numbers.
+
+Lists can also contain characters, or in this case, strings.
 
 37. Write a list of a few of your favorite things.
 ```Python
@@ -895,15 +955,17 @@ print(fruit)
 
 <blockquote><code>remove</code> only removes the first instance of the value in the list. So, if in the previous example orange appeared on the list a second time, only the first instance would be removed. To remove all instances, you would need to perform a loop (we’ll talk about loops later in the semester).</blockquote>
 
-## A few additional functions that can be useful when working with lists
+## List Functions and String Elements
 
-### `Reverse`
+Many of the list functions covered in the section of the lab focused on lists with numbers can also work on lists that contain strings.
 
-62. To print in reverse order, use `reverse()`.
+### `Len`
+
+64. To find the length of your list, use the `len()` function.
 ```Python
 fruit = ['apple', 'orange', 'pear', 'banana']
-fruit.reverse()
-print(fruit)
+length = len(fruit)
+print(length)
 ```
 
 ### `Sort`
@@ -915,113 +977,32 @@ fruit.sort()
 print(fruit)
 ```
 
-### `Len`
+### `Reverse`
 
-64. To find the length of your list, use the `len()` function.
+62. To print in reverse order, use `reverse()`.
 ```Python
 fruit = ['apple', 'orange', 'pear', 'banana']
-length = len(fruit)
-print(length)
+fruit.reverse()
+print(fruit)
 ```
+
+## Lab Notebook Questions on Lists With Strings 
+
 35. To recap: Lists are an ordered collection of items. Lists can be numbers or strings. They are declared with a variable name, but the information is contained within `[ ]` and the individual items are separated by a comma. 
 
-<blockquote>Q11: Create your own list of strings. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?</blockquote>
+Q11: Create your own list of strings. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?
 
-<blockquote>Q12: Using the same list from the previous question, write a program that includes the following steps or components:
-<ol type="a">
- <li>Adds a new item to your list</li>
- <li>Deletes an item from your list</li>
- <li>Sorts your list in-place</li>
- <li>Generates a sorted version of your list</li>
- <li>Reverse sorts your list in-place</li>
- <li>Generates a reverse sorted version of your list</li>
- <li>Determines the <code>min</code> and <code>max</code> values for your list</li>
- <li>Selects an list element at random</li>
- <li>Shuffles your list</li>
-</ol>
-</blockquote>
+Q10: Using the same list from the previous question, write a program that includes the following steps or components:
+- Adds a new item to your list
+- Deletes an item from your list
+- Sorts your list in-place
+- Generates a sorted version of your list
+- Reverse sorts your list in-place
+- Generates a reverse sorted version of your list
+- Determiens the `min` and `max` values for your list
+- Selects a list element at random
+- Shuffles your list
 
-## A List of Numbers
-
-65. We can also work with numbers in lists. 
-
-66. We can create a list in the same way that we did in the previous example, or we can use the `range()` function.
-```Python
-# in this example we'll wrap the list() function around the range() function to create a list of numbers
-
-numbers = list(range(1,10))
-print(numbers)
-```
-
-67. This outputs `[1, 2, 3, 4, 5, 6, 7, 8, 9]`
-
-68. You may have expected to see the numbers one to ten printed. This is yet another example of the quirks of working with programming languages. 
-
-69. Python starts with the first number and quits when it reaches the last number of your range. Because it stops at 10, it doesn’t include the 10.
-
-<blockquote>Q8: How would you modify this code to output the full range 1-10?</blockquote>
-
-70. What if we just wanted the odd numbers in this range? We could add an additional value to the `range` function to tell the computer to count by two.
-```Python
-numbers = list(range(1,11,2))
-print(numbers)
-```
-<blockquote>Q11: How would you rewrite the code to include only the even numbers from 1 to 10?</blockquote>
-
-71. Can you write a program that creates a list that represents all of the different patterns we could represent from 1 bit to 8 bits, like our chart from binary math lab?
-
-- 1 bit - 2 patterns
-- 2 bits - 4
-- 3 bits - 8
-- 4 bits - 16
-- 5 bits - 32
-- 6 bits - 64
-- 7 bits - 128
-- 8 bits - 256
-- n bits -2<sup>n</sup> patterns
-
-72. Try to write a program that outputs the list: `[2, 4, 8, 16, 32, 64, 128, 256]`.
-
-<blockquote>Hint: a double * represents exponents in Python. So 2<sup>2</sup> would be <code>2**2</code>.</blockquote>
-
-73. There are multiple ways to achieve this output.
-```Python
-patterns = []
-for bit in range(1,9):
-  patterns.append(2**bit)
-print(patterns)
-```
-
-74. Python also allows us to return the minimum value, maximum value, and sum of the numbers in a list.
-```Python
-patterns = []
-for bit in range(1,9):
-  patterns.append(2**bit)
-
-print(min(patterns))
-print(max(patterns))
-print(sum(patterns))
-```
-
-75. This program outputs
-`2`
-`256`
-`510`
-
-76. Lists nested within lists are called sub-lists.
-
-77. We can check if something is in a list using the `in` operator.
-
-<blockquote>Q12: Create the list <code>numbers</code> with the following values: <code>[[0, 1], [2, 3], [4, 5]]</code>. 
-<ol type="a">
-  <li>What is the second element?</li>
-  <li>How would you change 4 to 'four'?</li>
-  <li>How would you change 1 to 'one'?</li>
-  <li>How would you print out each sub-list (one sub-list per line)?</li>
-  <li>How would you print out each number (one number per line)?</li>
- </ol>
- </blockquote>
- 
 # How to submit this lab (and show your work)
 
 80. Moving forward, we'll submit lab notebooks as `.py` files. 
