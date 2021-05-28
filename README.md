@@ -1,20 +1,18 @@
-# Lists and Strings, Dictionaries and Sets in Python
+# Lists and Strings in Python
 
 <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" alt="Creative Commons License" /></a>
 This tutorial is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
 ## Lab Objectives
 - Practice utilizing lists and strings in the Python programming language
-- Practice utilizing dictionaries and sets in the Python programming language
 - Understand and articulate the differences between lists and strings
 - Use Python methods and functions to work with strings and numbers
-- Assign variables, concatenate strings, create lists, and define dictionaries
+- Assign variables, concatenate strings, and create lists
 
 ## Acknowledgements
 
 Elements of this lab procedure were adapted from materials developed by [Dr. Peter Bui](http://www3.nd.edu/~pbui/) for the [CSE 10101 "Elements of Computing I" course](https://www3.nd.edu/~pbui/teaching/cdt.30010.fa16/).
 - [Reading 05: Lists, Strings](https://www3.nd.edu/~pbui/teaching/cdt.30010.fa16/reading05.html)
-- [Reading 06: Dictionaries, Sets](https://www3.nd.edu/~pbui/teaching/cdt.30010.fa16/reading06.html)
 - [Notebook 05: Lists, Strings](https://www3.nd.edu/~pbui/teaching/cdt.30010.fa16/notebook05.html)
 
 Elements of this lab procedure were adapted from materials developed by [Dr. Janet Davis](https://cs.whitman.edu/~davisj/) for the the [CSC 105 "The Digital Age" course](https://www.cs.grinnell.edu/~davisjan/csc/105/2012S/). 
@@ -32,9 +30,6 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
   * [A List of Strings](#a-list-of-strings)
     * [A few additional functions that can be useful when working with lists](#a-few-additional-functions-that-can-be-useful-when-working-with-lists)
   * [A List of Numbers](#a-list-of-numbers)
-- [Working With Dictionaries](#working-with-dictionaries)
-- [Working With Sets](#working-with-sets)
-- [Additional Lab Notebook Questions](#additional-lab-notebook-questions)
 - [How to submit this lab (and show your work)](#how-to-submit-this-lab-and-show-your-work)
 - [Lab Notebook Questions](#lab-notebook-questions)
   
@@ -437,6 +432,19 @@ print(sum(patterns))
   <li>How would you print out each number (one number per line)?</li>
  </ol>
  </blockquote>
+ 
+# How to submit this lab (and show your work)
+
+80. Moving forward, we'll submit lab notebooks as `.py` files. 
+
+81. One option is to have a `.py` file that you use to run code and test programs while working through the lab. When ready to submit the lab notebook, you add comments and remove extraneous materials.
+
+82. Another option is to have an "official" `.py` file that you are using as a lab notebook (separate from your working/testing file). Use comments in Python to note when you are starting a new question (as well as answering a question).
+  * Example: `Lab5_Notebook_Walden.py`
+
+83. What gets submitted as the lab notebook is the `Lab5_Notebook_Walden.py` file.
+- When in doubt, use comments
+- Be sure you are using comments to note what question you're responding to
  
 # Lab Notebook Questions
 
