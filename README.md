@@ -49,7 +49,7 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
 
 6. Function vs. Method: Functions are generic, while a method is called on an object. A method is associated with an object (and can access/interact with the data or information that is part of that object). Functions do not alter the state of an object, while a method can alter an object state.
 
-# Working With Strings and Variables
+# Variables
 
 7. We worked with variables in our first Python lab. A variable is a placeholder for a piece of information. You can think of it as a basket or container. 
 
@@ -60,6 +60,8 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
 - As a rule, variable names should be short and descriptive.
 
 <blockquote>Q1: In your own words, explain the difference between <code>print(hello)</code> and <code>print(“hello”)</code>.</blockquote>
+
+# Strings
 
 9. Refresh: What are strings? A string is a sequence of characters. Although we can have list of characters, often times we want to access and manipulate the sequence as an aggregate set of text rather than individual letters. Strings are identified by the <code>“ ”</code> or alternatively by <code>‘ ’</code>.
 
@@ -86,6 +88,8 @@ str(True)
 ```
 
 10. Because certain operations on strings are so common, Python includes a variety of built-in methods that you can apply to a string object:
+
+## Title Methods
 
 11. Let's look at an example that uses different title methods.
 
@@ -118,6 +122,8 @@ first_name = "katherine"
 last_name = "walden"
 full_name = first_name + " " + last name
 ```
+## Concatenation
+
 15. Let’s modify our code a bit and create two new variables `first_name` for your first name and `last_name` for your last name. We can then combine these two string variables (called concatenation) in a third variable called `full_name`.
 
 16. If we want our first and last name to be separated by a space, we need to tell Python to add one in by including the `“ “`, otherwise, each string will be printed back-to-back.
@@ -153,7 +159,7 @@ print(sentence)
 
 <blockquote>Q3: Explain how each of these two programs (steps 15-18) work in your own words.</blockquote>
 
-# Combining Variable Types
+### Combining Variable Types
 
 20. Python works with integers (whole numbers) and floats (any number with a decimal point). Python uses the basic mathematic symbols to perform functions: `+` (add), `-` (subtract), `*` (multiply), `/` (divide). 
 
@@ -189,7 +195,7 @@ print("Welcome to " + course_name.title() + " CSE:" + str(course_number))
 
 <blockquote>Q6: Write a program that converts integer, float, or boolean values to a string, using the <code>str</code> function.</code></blockquote>
 
-# String Length and Access
+## String Length and Access
 
 We can get the length or size of a string by using the `len` function.
 
@@ -391,13 +397,193 @@ print ("The index number for the letter u within the word " + color + " is", ind
 
 # Working With Lists
 
-## A List of Strings
+34. Python allows us to store information in a few different ways. 
 
-34. Python allows us to store information in a few different ways. Let’s start with lists. 
+36. In this lab, we're focusing on lists, which are an ordered collection of items.
 
-35. Lists are an ordered collection of items. Lists can be numbers or strings. They are declared with a variable name, but the information is contained within `[ ]` and the individual items are separated by a comma. 
+The individual values in a list are called elements or items. 
 
-36. Refresh: A sequence of values is called a list; individual values in a list are called elements or items. Lists have a type and are also considered values themselves
+Lists have a type and are also considered values themselves.
+
+```Python
+# create a list containing 4 numbers
+[0, 1, 2, 3]
+
+# assign that list to a variable
+numbers = [0, 1, 2, 3]
+
+# check types of numbers variable
+type(numbers)
+```
+
+Although this is rare, list elements do not need to be the same type.
+
+```Python
+[0, 1.0, 'a']
+```
+
+## List Length and Access
+
+We can use the `len` function to get the length of a list.
+
+```Python
+len(numbers)
+```
+
+We can also use the index operator and index position to access and manipulate elements in a list.
+
+```Python
+# access first item in a list
+numbers[0]
+
+# access last item in a list
+numbers[-1]
+```
+
+```Python
+# modify first item in a list
+numbers[0] = 'zero'
+numbers
+```
+
+A few other notes on index operators:
+
+Indeces can be any integer expression.
+
+A few examples:
+
+```Python
+# `numbers[0+1]` is the same as `numbers[1]`
+numbers[0+1]
+numbers[1]
+
+# index position stored as a variable
+index = 1
+numbers[index]
+numbers[1]
+
+# index position as a multiplication product
+numbers[index * 2]
+numbers[2]
+```
+
+An invalid index will yield an IndexError.
+
+```Python
+numbers[1000]
+```
+
+And as covered with strings, a negative index will start at the end of the list and count right to left.
+
+```Python
+# access last item in list
+numbers[-1]
+
+# access next to last item in list
+numbers[-2]
+```
+
+## Modifying Lists
+
+While strings are immutable, items in a list can be modified.
+
+An example we've seen before that modifies a single list item.
+
+```Python
+# modify first item in a list
+numbers[0] = 'zero'
+numbers
+```
+
+We can also grow an existing list using the `.append()` or `.extend()` methods.
+
+```Python
+# add integer 4 to end of numbers list
+numbers.append(4)
+numbers
+
+# add [5,6,7] to end of numbers list
+numbers.extend(range(5, 8))
+numbers
+```
+
+To unpack what happened in that last bit of code- the `range()` function returns a sequence of numbers.
+
+The default `range()` function starts at `0`, but in this example we start at `5`. 
+
+The default `range()` function moves by increments of `1` and stops before a specified number. In our example, `range()` stops before 8.
+
+The core syntax for range:
+`range(start, stop, step)`
+
+We can delete items from a list using the `pop()` method or the `del` statement.
+
+```Python
+# remove an item at index 0 and return just that item
+numbers.pop(0)
+
+# remove an item at index 0
+del numbers[0]
+```
+
+## Empty Lists
+
+A list with no items is called an empty list.
+
+We can also use the `list()` argument to create an empty list.
+
+Examples in Python syntax:
+
+```Python
+# create empty list
+[]
+
+# create empty list using list()
+list()
+```
+
+## Nesting and Sublists
+
+Lists can also contain other lists- this is referred to as nested lists or sub-lists.
+
+```Python
+# create list with two sub-lists
+points = [[0, 1], [2, 3]]
+points
+
+# access first item on list, which is a sublist
+points[0]
+
+# access first item WITHIN second item on list; 
+# core syntax: list_name[list_item_number][sublist_item_number]
+points[1][0]
+```
+
+## Lists and the In Operator
+
+Like with strings, we can use the `in` operator to test if a list contains a specific value.
+
+```Python
+# checks if 0 is i numbers
+0 in numbers
+
+# checks if 5 is in numbers
+5 in numbers
+```
+
+Both of these commands return Boolean `True` or `False` statements.
+
+## Concatenation
+
+## Copying
+
+## Sorting
+
+### Revers
+
+## Lists of Strings
+
+We 
 
 37. Write a list of a few of your favorite things.
 ```Python
@@ -530,6 +716,7 @@ fruit = ['apple', 'orange', 'pear', 'banana']
 length = len(fruit)
 print(length)
 ```
+35. To recap: Lists are an ordered collection of items. Lists can be numbers or strings. They are declared with a variable name, but the information is contained within `[ ]` and the individual items are separated by a comma. 
 
 <blockquote>Q9: Create your own list of strings. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?</blockquote>
 
