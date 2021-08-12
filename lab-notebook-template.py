@@ -83,3 +83,5 @@
 # Determines the min and max values for your list
 # Selects an list element at random
 # Shuffles your list
+
+"""Q16: What is the difference between a list and a string? What are some methods you can perform on a list that you can't do with a string (and vice versa)?"""
