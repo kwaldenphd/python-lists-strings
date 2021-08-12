@@ -62,6 +62,7 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
       * [`Sort`](#sort)
       * [`Reverse`](#reverse)
     * [Lab Notebook Questions on Lists With Strings](#lab-notebook-questions-on-lists-with-strings)
+- [Additional Lab Notebook Questions](#additional-lab-notebook-questions)
 - [How to submit this lab (and show your work)](#how-to-submit-this-lab-and-show-your-work)
 - [Lab Notebook Questions](#lab-notebook-questions)
   
@@ -236,7 +237,7 @@ print("Welcome to " + course_name.title() + " CSE:" + str(course_number))
 len(first_name)
 ```
 
-32. We can also extract (or modify) individual characters within a string. To do so, we need a way to specify which character we mean. 
+32. We can also extract (or isolate) individual characters within a string. To do so, we need a way to specify which character we mean. 
 
 33. This is done by giving each position in the string an `index number` or `index operator`, which is determined by simply counting off (starting at 0) from left to right. 
 
@@ -339,17 +340,14 @@ len(first_name)
 
 ### Sort
 
-47. We can sort characters in a string alphabetically or reverse alphabetically.
+47. We can sort characters in a string alphabetically.
 
 ```Python
 # sort alphabetically
 sorted(first_name)
-
-# reverse sort
-reversed(first_name)
 ```
 
-48. These commands output the characters in the string in alphabetical or reverse alphabetical order.
+48. These commands output the characters in the string in alphabetical order.
 
 ### Max and Min
 
@@ -427,7 +425,7 @@ the boy who blocked his own shot'.endswith('shot')
 ```python
 color = "turquoise"
 index_number = color.index("q")
-print ("The index number for the letter u within the word " + color + " is", index_number)
+print ("The index number for the letter q within the word " + color + " is " + index_number)
 ```
 
 <blockquote>Q8: Modify the program to have it search for other characters in the string. Does it always return the index number you expect? What index is returned if you ask for the index of the letter u (i.e., what happens when the desired character appears more than once in the string)?</blockquote>
@@ -550,9 +548,7 @@ numbers
 
 75. To unpack what happened in that last bit of code- the `range()` function returns a sequence of numbers.
 
-76. The default `range()` function starts at `0`, but in this example we start at `5`. 
-
-77. The default `range()` function moves by increments of `1` and stops before a specified number. In our example, `range()` stops before 8.
+76. The default `range()` function starts at `0`, but in this example we start at `5`. The default `range()` function moves by increments of `1` and stops before a specified number. In our example, `range()` stops before 8.
 
 #### A Quick Detour Into `range()`
 
@@ -718,20 +714,6 @@ numbers.reverse()
 numbers
 ```
 
-```Python
-# generate reversed version of list
-reversed(numbers)
-
-# show original list
-numbers
-
-# create new variable with reversed list
-reversed_numbers = reversed(numbers)
-
-# show new varaible with reversed list
-reversed_numbers
-```
-
 #### Utility Functions
 
 102. A few other functions that come in handy when working with lists that contain numbers.
@@ -770,8 +752,12 @@ min([0, 1, 2, 3])
 # find min value using list variable
 min(list)
 ```
+To use any of the `random` functions, we would first need to import the `random` module.
 
 ```Python
+# import random module
+import random
+
 # select element at random
 random.choice(list)
 ```
@@ -840,9 +826,8 @@ Q13: Using the same list from the previous question, write a program that includ
 - Deletes an item from your list
 - Sorts your list in-place
 - Generates a sorted version of your list
-- Reverse sorts your list in-place
-- Generates a reverse sorted version of your list
-- Determiens the `min` and `max` values for your list
+- Reverses your list in-place
+- Determines the `min` and `max` values for your list
 - Selects a list element at random
 - Shuffles your list
 
@@ -1003,22 +988,21 @@ Q15: Using the same list from the previous question, write a program that includ
 - Deletes an item from your list
 - Sorts your list in-place
 - Generates a sorted version of your list
-- Reverse sorts your list in-place
-- Generates a reverse sorted version of your list
-- Determiens the `min` and `max` values for your list
+- Reverses your list in-place
+- Determines the `min` and `max` values for your list
 - Selects a list element at random
 - Shuffles your list
 
 # How to submit this lab (and show your work)
 
-147. Moving forward, we'll submit lab notebooks as `.py` files. 
+Moving forward, we'll submit lab notebooks as `.py` files. 
 
-148. One option is to have a `.py` file that you use to run code and test programs while working through the lab. When ready to submit the lab notebook, you add comments and remove extraneous materials.
+One option is to have a `.py` file that you use to run code and test programs while working through the lab. When ready to submit the lab notebook, you add comments and remove extraneous materials.
 
-149. Another option is to have an "official" `.py` file that you are using as a lab notebook (separate from your working/testing file). Use comments in Python to note when you are starting a new question (as well as answering a question).
+Another option is to have an "official" `.py` file that you are using as a lab notebook (separate from your working/testing file). Use comments in Python to note when you are starting a new question (as well as answering a question).
   * Example: `Lab5_Notebook_Walden.py`
 
-150. What gets submitted as the lab notebook is the `Lab5_Notebook_Walden.py` file.
+What gets submitted as the lab notebook is the `Lab5_Notebook_Walden.py` file.
 - When in doubt, use comments
 - Be sure you are using comments to note what question you're responding to
  
@@ -1030,7 +1014,7 @@ Q2: Describe the syntax of the three commands that we just used (steps 10-14) in
 
 Q3: Explain how each of these two programs (steps 15-18) work in your own words.
 
-Q4: Why does `print(2/3)` return `0`? How would you modify your code to return the decimal number? Why?
+Q4: Why does `print(2//3)` return `0`? How would you modify your code to return the decimal number? Why?
 
 Q5: Explain concatenation in your own words. Why must we convert numbers to strings in the program above? Refer to this example and the previous example.
 
@@ -1056,29 +1040,23 @@ Q11: Create the list `numbers` with the following values: `[[0, 1], [2, 3], [4, 
 Q12: Create your own list of numbers. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?
 
 Q13: Using the same list from the previous question, write a program that includes the following steps or components:
-<ol type="a">
- <li>Adds a new item to your list</li>
- <li>Deletes an item from your list</li>
- <li>Sorts your list in-place</li>
- <li>Generates a sorted version of your list</li>
- <li>Reverse sorts your list in-place</li>
- <li>Generates a reverse sorted version of your list</li>
- <li>Determines the <code>min</code> and <code>max</code> values for your list</li>
- <li>Selects an list element at random</li>
- <li>Shuffles your list</li>
-</ol>
+- Adds a new item to your list
+- Deletes an item from your list
+- Sorts your list in-place
+- Generates a sorted version of your list
+- Reverses your list in-place
+- Determiens the `min` and `max` values for your list
+- Selects a list element at random
+- Shuffles your list
 
 Q14: Create your own list of strings. Include your list code as part of this question answer. What is the length of your list? What is the number position for each of the items in your list? How would you return the value of the first item? How would you return the value of the last item?
 
 Q15: Using the same list from the previous question, write a program that includes the following steps or components:
-<ol type="a">
- <li>Adds a new item to your list</li>
- <li>Deletes an item from your list</li>
- <li>Sorts your list in-place</li>
- <li>Generates a sorted version of your list</li>
- <li>Reverse sorts your list in-place</li>
- <li>Generates a reverse sorted version of your list</li>
- <li>Determines the <code>min</code> and <code>max</code> values for your list</li>
- <li>Selects an list element at random</li>
- <li>Shuffles your list</li>
-</ol>
+- Adds a new item to your list
+- Deletes an item from your list
+- Sorts your list in-place
+- Generates a sorted version of your list
+- Reverses your list in-place
+- Determines the `min` and `max` values for your list
+- Selects a list element at random
+- Shuffles your list
