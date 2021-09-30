@@ -765,6 +765,9 @@ random.choice(list)
 ```Python
 # shuffle a list in-place
 random.shuffle(list)
+
+# show updated/shuffled list
+print(list)
 ```
 
 ```Python
