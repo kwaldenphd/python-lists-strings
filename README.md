@@ -1016,7 +1016,7 @@ What gets submitted as the lab notebook is the `Lab5_Notebook_Walden.py` file.
 
 Q1: In your own words, explain the difference between `print(hello)` and `print(“hello”)`.
 
-Q2: Describe the syntax of the three commands that we just used (steps 10-14) in your own words. What is this code doing? Define the function and method for each example.
+Q2: Describe the syntax of the three commands that we just used (steps 14-18) in your own words. What is this code doing? Define the function and method for each example.
 
 Q3: Explain how each of these two programs (steps 15-18) work in your own words.
 
