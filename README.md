@@ -207,20 +207,29 @@ print(name.title())
 19. Let’s modify our code a bit and create two new variables `first_name` for your first name and `last_name` for your last name. We can then combine these two string variables (called concatenation) in a third variable called `full_name`.
 
 20. If we want our first and last name to be separated by a space, we need to tell Python to add one in by including the `“ “`, otherwise, each string will be printed back-to-back.
+
 ```Python
+# assign string variables
 first_name = "katherine"
 last_name = "walden"
+
+# use concatenation to create new variable
 full_name = first_name + " " + last name
 
+# output last variable
 print(full_name)
 ```
 
 21. We can then use the `print()` function as we did before to output `full_name` in title case.
 ```Python
+# assign string variables
 first_name = "katherine"
 last_name = "walden"
+
+# use concatenation to create new variable
 full_name = first_name + " " + last name
 
+# output last variable in title case as part of print statement
 print("Hello, " + full_name.title() + "!")
 ```
 
@@ -229,12 +238,17 @@ print("Hello, " + full_name.title() + "!")
 23. We could also assign this whole sentence to a variable and return the same output.
 
 ```Python
+# assign string variables
 first_name = "katherine"
 last_name = "walden"
+
+# use concatenation to create new variable
 full_name = first_name + " " + last name
 
+# use concatenation to create new variable
 sentence="Hello, " + full_name.title() + "!"
 
+# output last variable
 print(sentence)
 ```
 
@@ -245,7 +259,9 @@ print(sentence)
 24. Python works with integers (whole numbers) and floats (any number with a decimal point). Python uses the basic mathematic symbols to perform functions: `+` (add), `-` (subtract), `*` (multiply), `/` (divide). 
 
 25. Try this program:
+
 ```Python
+# arithmetic operator examples
 print(2+3)
 print(2-3)
 print(2*3)
@@ -256,10 +272,15 @@ print(2/3)
 26. Hint: Try `print(2.0//3.0)` using the floating point integers (numbers with decimal points).
 
 27. Let’s write a new program with an integer variable and a string variable. Feel free to modify course number and department if taking this as something other than CSE 10101.
+
 ```Python
+# assign string variable
 course_name="Elements of Computing I"
+
+# assign integer variable
 course_number = 10101
 
+# concatenation in print statement
 print("Welcome to " + course_name.title() + " CSE:" + course_number)
 ```
 
@@ -270,7 +291,9 @@ print("Welcome to " + course_name.title() + " CSE:" + course_number)
 29. The `type` error is telling us that we cannot use these two different variable types in the same function. 
 
 30. When we want numbers to be read as characters rather than numeric digits, we have to use the string method `str()` to convert the integer into a string of characters.
+
 ```Python
+# concatenation in print statement, using str function to convert course number
 print("Welcome to " + course_name.title() + " CSE:" + str(course_number))
 ```
 <blockquote>Q5: Explain concatenation in your own words. Why must we convert numbers to strings in the program above? Refer to this example and the previous example.</blockquote>
@@ -282,6 +305,7 @@ print("Welcome to " + course_name.title() + " CSE:" + str(course_number))
 31. We can get the length or size of a string by using the `len` function.
 
 ```Python
+# show length/number of characters in first_name variable
 len(first_name)
 ```
 
@@ -302,6 +326,7 @@ first_name[-1]
 35. In Python there is no notion of a character type as there is in languages such as Java or C. So when we check the type for a character in a string, we get back another string.
 
 ```Python
+# show data type for last character in string
 type(first_name[0])
 ```
 
@@ -316,6 +341,7 @@ type(first_name[0])
 <blockquote>Q7: Write a program that prompts the user to enter a 6-letter word, and then prints the first, third, and fifth letters of that word.</blockquote>
  
 38. A sample output for your program might look like this:
+
 ```
 Please enter a 6-letter word: joyful
 The first, third, and fifth letters are: j y u
@@ -326,13 +352,17 @@ The first, third, and fifth letters are: j y u
 40. The following program will result in a `TypeError`.
 
 ```Python
+# program that attempts to modify character in a string
 first_name[0] = 'k'
 ```
 
 41. So what do you do when you want to update a string? You simply construct a new one!
 
 ```Python
+# reassign first_name variable with modified first character
 first_name = 'k' + first_name[1:]
+
+# show reassigned variable
 first_name
 ```
 
@@ -345,6 +375,7 @@ first_name
 43. We've already seen the `len` function in action, but to refresh:
 
 ```Python
+# get length of first_name variable
 len(first_name)
 ```
 
@@ -471,8 +502,13 @@ the boy who blocked his own shot'.endswith('shot')
 
 59. We can retrieve the index of the letter `q` (which is 3) as follows:
 ```python
+# assign string variable
 color = "turquoise"
+
+# get index number of q character
 index_number = color.index("q")
+
+# show index number as part of print statement
 print ("The index number for the letter q within the word " + color + " is " + index_number)
 ```
 
@@ -519,6 +555,7 @@ type(numbers)
 65. We can use the `len` function to get the length of a list.
 
 ```Python
+# show length of numbers list
 len(numbers)
 ```
 
@@ -562,6 +599,7 @@ numbers[2]
 70. An invalid index will yield an IndexError.
 
 ```Python
+# example of invalid index
 numbers[1000]
 ```
 
@@ -584,6 +622,8 @@ numbers[-2]
 ```Python
 # modify first item in a list
 numbers[0] = 'zero'
+
+# show updated list
 numbers
 ```
 
@@ -594,10 +634,14 @@ numbers
 ```Python
 # add integer 4 to end of numbers list
 numbers.append(4)
+
+# show updated list
 numbers
 
 # add [5,6,7] to end of numbers list
 numbers.extend(range(5, 8))
+
+# show updated list
 numbers
 ```
 
@@ -613,11 +657,13 @@ numbers
 
 79. Python starts with the first number and quits when it reaches the last number of your range. Because it stops at 10, it doesn’t include the 10.
 
-80. We can actually create lists using `range()`.
+80. We can actually create lists using `range()`. In this example we'll wrap the `list()` function around the `range()` function to create a list of numbers.
 
 ```Python
-# in this example we'll wrap the list() function around the range() function to create a list of numbers
+# create list of numbers
 numbers = list(range(1,10))
+
+# show list of numbers
 print(numbers)
 ```
 
@@ -630,7 +676,10 @@ print(numbers)
 83. A example that changes the step interval.
 
 ```Python
+# create list of numbers with specific start/stop/step interval values
 numbers = list(range(1,11,2))
+
+# show list
 print(numbers)
 ```
 
@@ -671,6 +720,8 @@ list()
 ```Python
 # create list with two sub-lists
 points = [[0, 1], [2, 3]]
+
+# show list
 points
 
 # access first item on list, which is a sublist
@@ -702,6 +753,7 @@ points[1][0]
 92. We can concatenate (or join) two lists using the `+` operator.
 
 ```Python
+# sample concatenation syntax
 [0, 1, 2,] + [3, 4, 5]
 ```
 
@@ -710,6 +762,7 @@ points[1][0]
 93. We can copy a list using the `*` (multiplication) operator.
 
 ```Python
+# sample copy syntax
 [0, 1, 2] * 3
 ```
 
@@ -848,6 +901,7 @@ random.sample(list, 2)
 110. We can use a **`for` loop** to iterate over the items in a list.
 
 ```Python
+# sample for loop that iterates over items in list
 for number in numbers:
  print(number)
 ```
@@ -855,6 +909,7 @@ for number in numbers:
 111. We can iterate over just the indeces in the list.
 
 ```Python
+# sample for loop that iterates over index values for items in list
 for i in range(len(numbers)):
  print(number[i])
 ```
@@ -862,6 +917,7 @@ for i in range(len(numbers)):
 112. We can retrieve the item and the index position using the `enumerate()` function.
 
 ```Python
+# sample for loop that gets list value and index using enumerate
 for i, number in enumerate(numbers):
  print(i, number)
 ```
@@ -899,6 +955,7 @@ Q13: Using the same list from the previous question, write a program that includ
 
 117. Write a list of a few of your favorite things.
 ```Python
+# sample list of strings
 cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
 ```
 
@@ -909,6 +966,7 @@ cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
 
 120. Add a `print()` function calling a specific item on your list.
 ```Python
+# output first item in the list in title case
 print(cookies[0].title())
 ```
 
@@ -921,13 +979,13 @@ Chocolate Chip
 
 123. A `print` function that outputs the last item on my list of four items would look like this.
 ```Python
-cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
+# output fourth item in list in title case
 print(cookies[3].title())
 ```
 
 124. We can also work backwards (left-to-right) on our list using negative numbers. For example, to call the last item on the list we could also use the index position `-1`.
 ```Python
-cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
+# output last item in list in title case using negative index
 print(cookies[-1].title())
 ```
 
@@ -935,7 +993,7 @@ print(cookies[-1].title())
 
 126. We can concatenate our list items in strings.
 ```Python
-cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
+# print statement that includes concatenation
 print("My favorite cookie to bake is " + cookies[1].title() + ".")
 ```
 
@@ -945,8 +1003,10 @@ print("My favorite cookie to bake is " + cookies[1].title() + ".")
 
 129. Maybe I have a friend who is allergic to peanut butter. I can change the `peanut butter` entry.
 ```Python
-cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
+# change third item in list
 cookies[2] = 'oatmeal'
+
+# show updated list
 print(cookies)
 ```
 
@@ -955,8 +1015,13 @@ print(cookies)
 
 131. We can also add data to our list using the append function.
 ```Python
+# recreate original list
 cookies = ['chocolate chip', 'snickerdoodle', 'peanut butter', 'sugar']
+
+# append value to end of list
 cookies.append('oatmeal')
+
+# show updated list
 print(cookies)
 ```
 
@@ -964,10 +1029,15 @@ print(cookies)
 
 133. We can also use `append()` to create new lists.
 ```Python
+# create empty list
 my_pets = []
+
+# append values to list
 my_pets.append('Christy Mathewson')
 my_pets.append('Smoky Jo Wood')
 my_pets.append('Sandy Koufax')
+
+# show updated list
 print(my_pets)
 ```
 
@@ -977,8 +1047,13 @@ print(my_pets)
 
 136. The `insert()` function allows us to add items to any position in the list.
 ```Python
+# create list of fruits
 fruit = ['apple', 'pear', 'banana']
+
+# insert new value at specific location
 fruit.insert(1, 'orange')
+
+# show updated list
 print(fruit)
 ```
 
@@ -990,15 +1065,25 @@ print(fruit)
 
 140. The following code will remove `orange` from the list.
 ```Python
+# recreate original list
 fruit = ['apple', 'orange', 'pear', 'banana']
+
+# remove second value
 del fruit[1]
+
+# show updated list
 print(fruit)
 ```
 
 141. We can also delete items by value (instead of position) using `remove()`.
 ```Python
+# recreate original list
 fruit = ['apple', 'orange', 'pear', 'banana']
+
+# remove specific string
 fruit.remove('orange')
+
+# show updated list
 print(fruit)
 ```
 
@@ -1011,27 +1096,43 @@ print(fruit)
 #### `Len`
 
 143. To find the length of your list, use the `len()` function.
+
 ```Python
+# recreate original list
 fruit = ['apple', 'orange', 'pear', 'banana']
+
+# get length of list and assign to variable
 length = len(fruit)
+
+# output length
 print(length)
+```
+
+```Python
+# alternative syntax
+len(fruit)
 ```
 
 #### `Sort`
 
 144. To alphabetize your list, use the `sort()` method.
 ```Python
-fruit = ['apple', 'orange', 'pear', 'banana']
+# sort list
 fruit.sort()
+
+# show sorted list
 print(fruit)
 ```
 
 #### `Reverse`
 
 145. To print in reverse order, use `reverse()`.
+
 ```Python
-fruit = ['apple', 'orange', 'pear', 'banana']
+# reverse sort list
 fruit.reverse()
+
+# show sorted list
 print(fruit)
 ```
 
