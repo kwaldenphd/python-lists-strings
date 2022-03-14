@@ -10,6 +10,13 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
 - Understand and articulate the differences between lists and strings
 - Use Python methods and functions to work with strings and numbers
 
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8ccafd04-171b-47c5-9cda-ad8201619bf3">Lab overview</a></td>
+  </tr>
+  </table>
+
 ## Acknowledgements
 
 Elements of this lab procedure were adapted from materials developed by [Dr. Peter Bui](http://www3.nd.edu/~pbui/) for the [CSE 10101 "Elements of Computing I" course](https://www3.nd.edu/~pbui/teaching/cdt.30010.fa16/).
@@ -24,6 +31,8 @@ Elements of this lab procedure were adapted from materials developed by [Dr. Cor
 Elements of this lab procedure were adapted from materials developed by [Lindsay K. Mattock](http://lindsaymattock.net/) for the the [SLIS 5020 Computing Foundations course](http://lindsaymattock.net/computingfoundations.html). 
 
 # Table of Contents
+- [Lecture and Live Coding](#lecture-and-live-coding)
+- [Lab Notebook Template](#lab-notebook-template)
 - [Python Syntax: Methods and Functions](#python-syntax-methods-and-functions)
 - [Variables](#variables)
 - [Strings](#strings)
@@ -65,8 +74,40 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
 - [Additional Lab Notebook Questions](#additional-lab-notebook-questions)
 - [How to submit this lab (and show your work)](#how-to-submit-this-lab-and-show-your-work)
 - [Lab Notebook Questions](#lab-notebook-questions)
+
+[Link to lab procedure as a Jupyter Notebook](https://drive.google.com/file/d/1yxvNZuUzokmQLYzO0b3kF97vmHyifLYG/view?usp=sharing)
   
+# Lecture and Live Coding
+
+Throughout this lab, you will see a Panopto icon at the start of select sections.
+
+This icon indicates there is lecture/live coding asynchronous content that accompanies this section of the lab. 
+
+You can click the link in the figure caption to access these materials (ND users only).
+
+Example:
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8ccafd04-171b-47c5-9cda-ad8201619bf3">Lab overview</a></td>
+  </tr>
+  </table>
+
+# Lab Notebook Template
+
+Lab notebook template:
+- [`.py` file](https://drive.google.com/file/d/1gO7KJlNwFoTSXwcA86rxH3WOnu9opSpn/view?usp=sharing)
+- [Jupyter Notebook](https://drive.google.com/file/d/1f8JecjYtzmBjDqsTZQcrtp49A1ZYhPgC/view?usp=sharing)
+
 # Python Syntax: Methods and Functions
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8ccafd04-171b-47c5-9cda-ad8201619bf3">Lab overview</a></td>
+  </tr>
+  </table>
 
 1. Python has some specific terminology used to describe elements of code.
 
@@ -93,6 +134,13 @@ Elements of this lab procedure were adapted from materials developed by [Lindsay
 <blockquote>Q1: In your own words, explain the difference between <code>print(hello)</code> and <code>print(“hello”)</code>.</blockquote>
 
 # Strings
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3019ac5c-06ad-4deb-9e49-ad8201622eb6">Strings</a></td>
+  </tr>
+  </table>
 
 9. What are strings? 
 
@@ -431,6 +479,13 @@ print ("The index number for the letter q within the word " + color + " is " + i
 <blockquote>Q8: Modify the program to have it search for other characters in the string. Does it always return the index number you expect? What index is returned if you ask for the index of the letter u (i.e., what happens when the desired character appears more than once in the string)?</blockquote>
 
 # Lists
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+  <td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9e9fb874-99d5-4d5b-923b-ad82016231cb">Lists</a></td>
+  </tr>
+  </table>
 
 60. Python allows us to store information in a few different ways. 
 
@@ -1016,6 +1071,10 @@ What gets submitted as the lab notebook is the `Lab5_Notebook_Walden.py` file.
 - Be sure you are using comments to note what question you're responding to
  
 # Lab Notebook Questions
+
+Lab notebook template:
+- [`.py` file](https://drive.google.com/file/d/1gO7KJlNwFoTSXwcA86rxH3WOnu9opSpn/view?usp=sharing)
+- [Jupyter Notebook](https://drive.google.com/file/d/1f8JecjYtzmBjDqsTZQcrtp49A1ZYhPgC/view?usp=sharing)
 
 Q1: In your own words, explain the difference between `print(hello)` and `print(“hello”)`.
 
