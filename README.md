@@ -17,6 +17,13 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
   </tr>
   </table>
 
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=e43043e9-e683-4a97-ae45-ae3001369ef2">Lecture/live coding playlist</a></td>
+  </tr>
+  </table>
+  
 ## Acknowledgements
 
 Elements of this lab procedure were adapted from materials developed by [Dr. Peter Bui](http://www3.nd.edu/~pbui/) for the [CSE 10101 "Elements of Computing I" course](https://www3.nd.edu/~pbui/teaching/cdt.30010.fa16/).
@@ -94,6 +101,13 @@ Example:
   </tr>
   </table>
 
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?pid=e43043e9-e683-4a97-ae45-ae3001369ef2">Lecture/live coding playlist</a></td>
+  </tr>
+  </table>
+  
 # Lab Notebook Template
 
 Lab notebook template:
