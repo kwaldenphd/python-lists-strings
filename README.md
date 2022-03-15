@@ -1168,9 +1168,9 @@ Q15: Using the same list from the previous question, write a program that includ
 
 # Additional Lab Notebook Questions
 
-<blockquote>Q16: What is the difference between a <code>list</code> and a <code>string</code>? What are some methods you can perform on a <code>list</code> that you can't do with a <code>string</code> (and vice versa)?</blockquote>
+Q16: What is the difference between a `list` and a `string`? What are some methods you can perform on a `list` that you can't do with a `string` (and vice versa)?
 
-<blockquote>Q17: Include a link to your Replit workspace for this lab.</blockquote>
+Q17: Include a link to your Replit workspace for this lab.
 
 # How to submit this lab (and show your work)
 
